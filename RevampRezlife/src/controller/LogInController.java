@@ -17,7 +17,9 @@ public class LogInController {
 			return ReturnCode.VALIDATION_ERROR;
 		}
 		
-		CUMember user = new CUMember(username, password);
+		// Will need to be adjusted to take in the username
+		// Using default user for iniitial development
+		CUMember user = new CUMember();
 		homeGUI = new HomeGUI(user);
 		
 		return ReturnCode.OPERATION_SUCCESSFUL;
