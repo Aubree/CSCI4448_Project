@@ -7,13 +7,28 @@ public class CUMember {
 	private String lastname;
 	private String email;
 	private String gender;
-	private Integer phone_number;
+	private String phone_number;
 	private Integer cu_id;
 	private ResidentProfile resident_profile;
 	private ArrayList<CU_Job> job_list;
 	
+	public CUMember() {
+		// Default CUMember is an RA (and thus also a CA) thus has a Resident Profile and two jobs
+		firstname = "John";
+		lastname = "Downer";
+		email = firstname + "." + lastname + "@colorado.edu";
+		gender = "female";
+		phone_number = "555-555-5555";
+		cu_id = 123456789;
+		resident_profile = new ResidentProfile();	
+		job_list = new ArrayList<CU_Job>();
+		job_list.add(new ResidentAdvisor());
+		job_list.add(new CommunityAssistant());
+	}
+	
 	public CUMember(String username, String password) {
 		// load profile from database
+		
 		job_list = new ArrayList<CU_Job>();
 		resident_profile = new NullResidentProfile();
 		
@@ -31,6 +46,11 @@ public class CUMember {
 		else {
 			return true;
 		}
+	}
+	
+	private CUMember getCUMemberFromUsername(String username) {
+		CUMember member = new CUMember();
+		return member;
 	}
 	
 	public String getFirstname() {
@@ -57,10 +77,10 @@ public class CUMember {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public Integer getPhone_number() {
+	public String getPhone_number() {
 		return phone_number;
 	}
-	public void setPhone_number(Integer phone_number) {
+	public void setPhone_number(String phone_number) {
 		this.phone_number = phone_number;
 	}
 	public Integer getCu_id() {
