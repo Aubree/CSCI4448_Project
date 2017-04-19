@@ -34,7 +34,7 @@ public class Building {
 	public void addFrontDesk(){ //should this be nothing or deskId
 		//add front desk to List<FrontDesk>
 	}
-	public void addStaffMEmber(CU_Job){
+	public void addStaffMember(CU_Job cu_jobs){
 		//I know...
 	}
 	public String getStaffMember(String CU_id){
@@ -45,7 +45,5 @@ public class Building {
 		FrontDesk two;
 		return two;
 	}
-	}
-
 	
 }
