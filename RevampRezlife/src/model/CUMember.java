@@ -26,13 +26,6 @@ public class CUMember {
 		job_list.add(new CommunityAssistant());
 	}
 	
-	public CUMember(String username, String password) {
-		// load profile from database
-		
-		job_list = new ArrayList<CU_Job>();
-		resident_profile = new NullResidentProfile();
-		
-	}
 	
 	public static boolean isValidUser(String username, String password) {
 		
@@ -48,7 +41,7 @@ public class CUMember {
 		}
 	}
 	
-	private CUMember getCUMemberFromUsername(String username) {
+	public CUMember getCUMemberFromUsername(String username) {
 		CUMember member = new CUMember();
 		return member;
 	}
