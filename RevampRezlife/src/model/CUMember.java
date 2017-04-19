@@ -12,8 +12,13 @@ public class CUMember {
 	private ResidentProfile resident_profile;
 	private ArrayList<CU_Job> job_list;
 	
+	public CUMember() {
+		
+	}
+	
 	public CUMember(String username, String password) {
 		// load profile from database
+		
 		job_list = new ArrayList<CU_Job>();
 		resident_profile = new NullResidentProfile();
 		
@@ -31,6 +36,11 @@ public class CUMember {
 		else {
 			return true;
 		}
+	}
+	
+	private CUMember getCUMemberFromUsername(String username) {
+		CUMember member = new CUMember();
+		return member;
 	}
 	
 	public String getFirstname() {

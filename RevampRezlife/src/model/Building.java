@@ -25,7 +25,7 @@ public class Building {
 	}
 	public RoomAttribute getRoom(Integer roomnumber){
 		//filler until I figure out wtf im doing
-		RoomAttribute one;
+		RoomAttribute one = new RoomAttribute();
 		return one;
 	}
 	public String getName(){
@@ -34,7 +34,7 @@ public class Building {
 	public void addFrontDesk(){ //should this be nothing or deskId
 		//add front desk to List<FrontDesk>
 	}
-	public void addStaffMEmber(CU_Job){
+	public void addStaffMember(CU_Job job){
 		//I know...
 	}
 	public String getStaffMember(String CU_id){
@@ -42,10 +42,10 @@ public class Building {
 	}
 	//getStaffList()
 	public FrontDesk getFrontDesk(Integer deskId){
-		FrontDesk two;
+		FrontDesk two = new FrontDesk();
 		return two;
 	}
-	}
+	
 
 	
 }
