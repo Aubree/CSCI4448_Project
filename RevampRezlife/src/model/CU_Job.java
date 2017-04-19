@@ -1,7 +1,11 @@
 package model;
 
 public class CU_Job {
-	private String job_title;
+	protected String job_title;
+	
+	public CU_Job() {
+		job_title = "Employee";
+	}
 	
 	public CU_Job(Integer cu_id) {
 		
