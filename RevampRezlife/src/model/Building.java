@@ -23,13 +23,17 @@ public class Building {
 		//roomList.add()
 		//add room to roomsList
 	}
-	public Room getRoomList(){
+	public ArrayList<Room> getRoomList(){
 		return roomsList;
 	}
-	public RoomAttribute getRoom(Integer roomnumber){
+	public Room getRoom(Integer roomnumber){
 		//filler until I figure out wtf im doing
-		RoomAttribute one;
-		return one;
+		if(roomsList.size() < roomnumber) {
+			return null;
+		}
+		else {
+			return roomsList.get(roomnumber);
+		}
 	}
 	public String getName(){
 		return name;
@@ -45,7 +49,7 @@ public class Building {
 	}
 	//getStaffList()
 	public FrontDesk getFrontDesk(Integer deskId){
-		FrontDesk two;
+		FrontDesk two = new FrontDesk();
 		return two;
 	}
 	

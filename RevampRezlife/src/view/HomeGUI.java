@@ -22,6 +22,7 @@ public class HomeGUI {
 	private void buildHomeGUI(CUMember cu_member) {
 		main_frame = new JFrame("Revamp Rezlife Home");
 		main_frame.setSize(WIDTH, HEIGHT);
+		main_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		tabbed_pane = new JTabbedPane();
 		buildTabs(cu_member);

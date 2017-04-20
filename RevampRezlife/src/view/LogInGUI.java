@@ -30,6 +30,7 @@ public class LogInGUI {
 		mainFrame = new JFrame("Revamp Rezlife Log-In");
 		mainFrame.setSize(WIDTH, HEIGHT);
 		mainFrame.setLayout(new GridBagLayout());
+		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		layoutConstraints = new GridBagConstraints();
 		
 		headerLabel = new JLabel("Revamp Rezlife Log-In", JLabel.CENTER);
