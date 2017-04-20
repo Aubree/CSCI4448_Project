@@ -6,7 +6,7 @@ import controller.*;
 
 
 
-public class LogInGUI {
+public class LogInGUI extends JFrame implements ActionListener{
 	private LogInController loginController;
 	private JFrame mainFrame;
 	private GridBagConstraints layoutConstraints;
@@ -22,15 +22,15 @@ public class LogInGUI {
 	
 	public LogInGUI() {
 		loginController = new LogInController();
+		setTitle("Revamp Rezlife Log-In");
+		setSize(WIDTH, HEIGHT);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLayout(new GridBagLayout());
 		buildGUI();
 	
 	}
 	
 	private void buildGUI() {
-		mainFrame = new JFrame("Revamp Rezlife Log-In");
-		mainFrame.setSize(WIDTH, HEIGHT);
-		mainFrame.setLayout(new GridBagLayout());
-		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		layoutConstraints = new GridBagConstraints();
 		
 		headerLabel = new JLabel("Revamp Rezlife Log-In", JLabel.CENTER);
@@ -38,57 +38,57 @@ public class LogInGUI {
 		layoutConstraints.gridx = 0;
 		layoutConstraints.gridy = 0;
 		layoutConstraints.gridwidth = 2;
-		mainFrame.add(headerLabel, layoutConstraints);
+		add(headerLabel, layoutConstraints);
 		
 		identikeyLabel = new JLabel("identikey:");
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridx = 0;
 		layoutConstraints.gridy = 1;
 		layoutConstraints.gridwidth = 1;
-		mainFrame.add(identikeyLabel, layoutConstraints);
+		add(identikeyLabel, layoutConstraints);
 		
 		identikeyTextField = new JTextField();
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridwidth = 1;
 		layoutConstraints.gridx = 1;
 		layoutConstraints.gridy = 1;
-		mainFrame.add(identikeyTextField, layoutConstraints);
+		add(identikeyTextField, layoutConstraints);
 		
 		passwordLabel = new JLabel("password:");
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridwidth = 1;
 		layoutConstraints.gridx = 0;
 		layoutConstraints.gridy = 2;
-		mainFrame.add(passwordLabel, layoutConstraints);
+		add(passwordLabel, layoutConstraints);
 		
 		passwordField = new JPasswordField();
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridwidth = 1;
 		layoutConstraints.gridx = 1;
 		layoutConstraints.gridy = 2;
-		mainFrame.add(passwordField, layoutConstraints);
+		add(passwordField, layoutConstraints);
 		
 		submitButton = new JButton("Sign In");
-		submitButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				ReturnCode result;
-				result = loginController.logInUser(identikeyTextField.getText(), passwordField.getText());
-				if (result.equals(ReturnCode.VALIDATION_ERROR)) {
-					identikeyTextField.setText("");
-					passwordField.setText("");
-				}
-				if (result.equals(ReturnCode.OPERATION_SUCCESSFUL)) {
-					mainFrame.dispose();
-				}
-			}
-		});
+		submitButton.addActionListener(this);
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridwidth = 1;
 		layoutConstraints.gridx = 1;
 		layoutConstraints.gridy = 3;
-		mainFrame.add(submitButton, layoutConstraints);
+		add(submitButton, layoutConstraints);
 		
-		mainFrame.setVisible(true);
+		setVisible(true);
 	
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		ReturnCode result;
+		result = loginController.logInUser(identikeyTextField.getText(), passwordField.getText());
+		if (result.equals(ReturnCode.VALIDATION_ERROR)) {
+			identikeyTextField.setText("");
+			passwordField.setText("");
+		}
+		if (result.equals(ReturnCode.OPERATION_SUCCESSFUL)) {
+			dispose();
+		}
 	}
 }
