@@ -8,7 +8,7 @@ import controller.*;
 
 public class LogInGUI extends JFrame implements ActionListener{
 	private LogInController loginController;
-	private JFrame mainFrame;
+
 	private GridBagConstraints layoutConstraints;
 	private JLabel headerLabel;
 	private JLabel identikeyLabel;
@@ -88,6 +88,7 @@ public class LogInGUI extends JFrame implements ActionListener{
 			passwordField.setText("");
 		}
 		if (result.equals(ReturnCode.OPERATION_SUCCESSFUL)) {
+			new HomeGUI(loginController.getUser());
 			dispose();
 		}
 	}

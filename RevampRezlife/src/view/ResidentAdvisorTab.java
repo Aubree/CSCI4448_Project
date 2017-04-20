@@ -1,5 +1,7 @@
 package view;
 
-public class ResidentAdvisorTab {
+import javax.swing.*;
+
+public class ResidentAdvisorTab extends JPanel {
 
 }

@@ -6,7 +6,8 @@ import model.*;
 import view.*;
 
 public class LogInController {
-	private HomeGUI homeGUI;
+	private CUMember user;
+	
 	
 	public ReturnCode logInUser(String username, String password) {
 		// Todo: Implement database connection and confirm identity
@@ -19,9 +20,12 @@ public class LogInController {
 		
 		// Will need to be adjusted to take in the username
 		// Using default user for iniitial development
-		CUMember user = new CUMember();
-		homeGUI = new HomeGUI(user);
+		user = new CUMember();
 		
 		return ReturnCode.OPERATION_SUCCESSFUL;
+	}
+	
+	public CUMember getUser() {
+		return user;
 	}
 }

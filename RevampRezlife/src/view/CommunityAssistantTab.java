@@ -1,5 +1,7 @@
 package view;
 
-public class CommunityAssistantTab {
+import javax.swing.*;
+
+public class CommunityAssistantTab extends JPanel{
 
 }
