@@ -20,7 +20,7 @@ public class CUMember {
 		gender = "female";
 		phone_number = "555-555-5555";
 		cu_id = 123456789;
-		resident_profile = new ResidentProfile();	
+		resident_profile = new ResidentProfile(this);	
 		job_list = new ArrayList<CU_Job>();
 		job_list.add(new ResidentAdvisor());
 		job_list.add(new CommunityAssistant());

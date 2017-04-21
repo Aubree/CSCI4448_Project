@@ -10,6 +10,12 @@ public class Building {
 	private ArrayList<FrontDesk> front_desk = new ArrayList<FrontDesk>();
 	private ArrayList<CU_Job> staff = new ArrayList<CU_Job>();
 	
+	public Building() {
+		// Default Building Object
+		name = "Stearns East";
+		
+	}
+	
 	public Boolean getRoomAvailability(){//doesn't this has to pass in roomsList
 		//if room availability is open return TRUE
 		//else return FALSE

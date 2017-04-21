@@ -25,7 +25,7 @@ public class ResidentInformationPanel extends JPanel {
 		student_id_label = new JLabel("Student ID: " + user.getCu_id());
 		email_label = new JLabel("Email: " + user.getEmail());
 		phone_number_label = new JLabel("Phone Number: " + user.getPhone_number());
-		room_label = new JLabel("Room: ");
+		room_label = new JLabel("Room: " + user.getResident_profile().getBuilding().getName() + " " + user.getResident_profile().getStudentRoom().getRoomNumber());
 		
 		setLayout(new GridBagLayout());
 		buildGUI();
