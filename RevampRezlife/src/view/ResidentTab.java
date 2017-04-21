@@ -70,7 +70,22 @@ public class ResidentTab extends JPanel implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent ae) {
-		System.out.println("hello world!");
+		Object object = ae.getSource();
+		if (object == temp_key_button) {
+			System.out.println("Temp Key Button Pushed");
+		}
+		if (object == item_checkout_button) {
+			System.out.println("Item Checkout Button Pushed");
+		}
+		if (object == review_RCF_button) {
+			System.out.println("Review RCF Button Pushed");
+		}
+		if (object == review_roommate_agreement_button) {
+			System.out.println("Review Roommate Agreement Button Pushed");
+		}
+		if (object == room_move_button) {
+			System.out.println("Room Move Button Pushed");
+		}
 	}
 	
 
