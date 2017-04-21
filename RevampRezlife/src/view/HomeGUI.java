@@ -28,7 +28,7 @@ public class HomeGUI extends JFrame {
 	private void buildTabs(CUMember cu_member) {
 		tab_panels = new ArrayList<JPanel>();
 		if(cu_member.hasResidentProfile()) {
-			tab_panels.add(new ResidentTab());
+			tab_panels.add(new ResidentTab(cu_member));
 			tabbed_pane.addTab("Resident", tab_panels.get(0));
 		}
 		
