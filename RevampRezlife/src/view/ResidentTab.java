@@ -5,6 +5,7 @@ import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+
 import controller.*;
 import model.CUMember;
 
@@ -22,6 +23,7 @@ public class ResidentTab extends JPanel implements ActionListener {
 	
 	public ResidentTab(CUMember user) {
 		resident_info = new ResidentInformationPanel(user);
+		resident_controller = new ResidentController();
 		
 		setLayout(new GridBagLayout());
 		buildGUI();
@@ -67,12 +69,28 @@ public class ResidentTab extends JPanel implements ActionListener {
 		
 		setVisible(true);
 	}
+	
+	private void tempKeyResponse(int choice) {
+		if (choice == JOptionPane.YES_OPTION) {
+			boolean result = resident_controller.requestTemporaryKey();
+			if (result == true) {
+				JOptionPane.showMessageDialog(null, "Temporary Key Request Sent Successfully.");
+			}
+			else {
+				choice = JOptionPane.showConfirmDialog(null, "Temporary Key Request Failed to Send. Retry?");
+				if (choice == JOptionPane.YES_OPTION) {
+					tempKeyResponse(choice);
+				}
+			}
+		}
+	}
 
 	@Override
 	public void actionPerformed(ActionEvent ae) {
 		Object object = ae.getSource();
 		if (object == temp_key_button) {
-			System.out.println("Temp Key Button Pushed");
+			int choice = JOptionPane.showConfirmDialog(null, "Are you sure you want to request a Temporary Key?");
+			tempKeyResponse(choice);
 		}
 		if (object == item_checkout_button) {
 			System.out.println("Item Checkout Button Pushed");
