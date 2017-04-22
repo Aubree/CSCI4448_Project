@@ -29,8 +29,8 @@ public class FrontDesk {
 		}
 	}
 	
-	public void AddDeskItem(Item item) {
-		
+	public void AddDeskItem(DeskItem item) {
+		deskItemsList.add(item);
 	}
 	
 	public Item getItem(Integer itemID) {
