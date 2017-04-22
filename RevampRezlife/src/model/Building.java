@@ -13,6 +13,7 @@ public class Building {
 	public Building() {
 		// Default Building Object
 		name = "Stearns East";
+		front_desk.add(new FrontDesk());
 		
 	}
 	

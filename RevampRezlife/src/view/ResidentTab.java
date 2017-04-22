@@ -23,7 +23,7 @@ public class ResidentTab extends JPanel implements ActionListener {
 	
 	public ResidentTab(CUMember user) {
 		resident_info = new ResidentInformationPanel(user);
-		resident_controller = new ResidentController();
+		resident_controller = new ResidentController(user);
 		
 		setLayout(new GridBagLayout());
 		buildGUI();
@@ -93,7 +93,7 @@ public class ResidentTab extends JPanel implements ActionListener {
 			tempKeyResponse(choice);
 		}
 		if (object == item_checkout_button) {
-			System.out.println("Item Checkout Button Pushed");
+			new ResidentItemCheckoutGUI(resident_controller);
 		}
 		if (object == review_RCF_button) {
 			System.out.println("Review RCF Button Pushed");
