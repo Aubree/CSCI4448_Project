@@ -59,6 +59,11 @@ public class Building {
 		FrontDesk two = new FrontDesk();
 		return two;
 	}
+	
+	public ArrayList<FrontDesk> getFrontDesks() {
+		return front_desk;
+	}
+	
 	public ArrayList<CU_Job> getStaffList(){
 		return staff;
 	}

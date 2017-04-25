@@ -33,7 +33,7 @@ public class FrontDesk {
 		deskItemsList.add(item);
 	}
 	
-	public Item getItem(Integer itemID) {
+	public DeskItem getDeskItem(Integer itemID) {
 		for (int i = 0; i < deskItemsList.size(); i++) {
 			if (deskItemsList.get(i).getItemID() == itemID) {
 				return deskItemsList.get(i);
