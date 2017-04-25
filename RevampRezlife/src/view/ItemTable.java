@@ -8,6 +8,7 @@ import javax.swing.table.DefaultTableModel;
 import model.DeskItem;
 import model.ItemState;
 
+import controller.CommunityAssistantController;
 import controller.ResidentController;
 
 public class ItemTable extends JTable {
@@ -30,6 +31,9 @@ public class ItemTable extends JTable {
 		}
 		
 		setFillsViewportHeight(false);
+	}
+	
+	public ItemTable(CommunityAssistantController ca_controller) {
 		
 	}
 
