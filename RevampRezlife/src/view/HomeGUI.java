@@ -38,7 +38,7 @@ public class HomeGUI extends JFrame {
 				tab_panels.add(new ResidentAdvisorTab());
 			}
 			if (jobs.get(i).getJob_title().equals("Community Assistant")) {
-				tab_panels.add(new CommunityAssistantTab());
+				tab_panels.add(new CommunityAssistantTab(cu_member));
 			}
 			tabbed_pane.addTab(jobs.get(i).getJob_title(), tab_panels.get(tab_panels.size()-1));
 		}
