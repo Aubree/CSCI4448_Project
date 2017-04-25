@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -28,8 +26,8 @@ public class Building {
 		//}
 		return true;
 	}
-	public void addRoom(Room roomsList){
-		//roomList.add()
+	public void addRoom(Room room){
+		roomsList.add(room);
 		//add room to roomsList
 	}
 	public ArrayList<Room> getRoomList(){
@@ -51,14 +49,18 @@ public class Building {
 		//add front desk to List<FrontDesk>
 	}
 	public void addStaffMember(CU_Job cu_jobs){
-		
+		staff.add(cu_jobs);
 	}
 	public String getStaffMember(String CU_id){
 		return CU_id;
 	}
 	//getStaffList()
-	public ArrayList<FrontDesk> getFrontDesks(){
-		return front_desk;
+	public FrontDesk getFrontDesk(Integer deskId){
+		FrontDesk two = new FrontDesk();
+		return two;
+	}
+	public ArrayList<CU_Job> getStaffList(){
+		return staff;
 	}
 	
 }

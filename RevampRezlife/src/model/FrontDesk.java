@@ -21,10 +21,11 @@ public class FrontDesk {
 	private void generateDefaultItems() {
 		// Method to test items
 		String item_name = "item";
+		ItemState item_state = new CheckedIn();
 		Integer late_fee_charge = 10;
 		
 		for (int i = 0; i < 10; i++) {
-			deskItemsList.add(new DeskItem(item_name + i, new CheckedIn(), late_fee_charge, i));
+			deskItemsList.add(new DeskItem(item_name + i, item_state, late_fee_charge, i));
 		}
 	}
 	
@@ -32,7 +33,7 @@ public class FrontDesk {
 		deskItemsList.add(item);
 	}
 	
-	public DeskItem getDeskItem(Integer itemID) {
+	public Item getItem(Integer itemID) {
 		for (int i = 0; i < deskItemsList.size(); i++) {
 			if (deskItemsList.get(i).getItemID() == itemID) {
 				return deskItemsList.get(i);
@@ -41,12 +42,23 @@ public class FrontDesk {
 		return null;
 	}
 	
-	public ArrayList<DeskItem> getDeskItems() {
-		return deskItemsList;
+	public Collection<DeskItem> getDeskItems() {
+		return Collections.unmodifiableCollection(deskItemsList);
 	}
 	
 	public String getDeskID() {
 		return deskID;
 	}
+	
+	public Key getTempKey(Integer itemId) {
+		for (int i = 0; i < temporaryKeyList.size(); i++){
+			if (temporaryKeyList.get(i).getItemID() == itemId){
+				return temporaryKeyList.get(i);
+			}
+		}
+		return null;
+	}
+	
+	
 
 }

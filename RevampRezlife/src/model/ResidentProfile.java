@@ -82,5 +82,29 @@ public class ResidentProfile {
 		this.phoneNumber = phoneNumber;
 	}
 	
+	//not normal getters and setters
+	public  ArrayList<Key> getKeyHistory() {
+		return keyHistory;
+		
+	}
 	
+	public ArrayList<Item> getRoomHistory() {
+		return deskItemHistory;
+	}
+	
+	public void addKey(Key key){
+		keyHistory.add(key);
+	}
+	
+	public void addRoom(){
+		Room newRoom = new Room();
+		studentRoom = newRoom;
+	}
+	public Key getPresentKey(){
+		return keyHistory.get(keyHistory.size() -1);
+	}
+	public Room getPresentRoom(){
+		return studentRoom;
+		
+	}
 }
