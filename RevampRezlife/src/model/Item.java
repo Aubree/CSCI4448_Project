@@ -8,7 +8,7 @@ public abstract class Item {
 	
 	public Item(String item_name, ItemState item_state, Integer late_fee_charge, Integer item_id) {
 		itemName = item_name;
-		item_state = itemState;
+		itemState = item_state;
 		lateFeeCharge = late_fee_charge;
 		itemID = item_id;
 	}

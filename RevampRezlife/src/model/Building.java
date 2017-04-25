@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -55,9 +57,8 @@ public class Building {
 		return CU_id;
 	}
 	//getStaffList()
-	public FrontDesk getFrontDesk(Integer deskId){
-		FrontDesk two = new FrontDesk();
-		return two;
+	public ArrayList<FrontDesk> getFrontDesks(){
+		return front_desk;
 	}
 	
 }

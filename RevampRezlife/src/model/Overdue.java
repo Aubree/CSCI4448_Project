@@ -14,4 +14,8 @@ public class Overdue implements ItemState {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	public String toString() {
+		return "Overdue";
+	}
 }
