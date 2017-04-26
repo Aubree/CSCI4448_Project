@@ -46,6 +46,10 @@ public class Room {
 	public void setMaxOccupancy(Integer maxOccupancy) {
 		this.maxOccupancy = maxOccupancy;
 	}
+	
+	private void generateRCF(){
+		//adds attributes to rcf
+	}
 
 
 }
