@@ -13,6 +13,7 @@ public class Room {
 		// Default Room
 		roomNumber = 555;
 		maxOccupancy = 2;
+		rcfList = new ArrayList<RoomConditionForm>();
 	}
 	
 	public void addResident(ResidentProfile resident) {
