@@ -81,8 +81,6 @@ public class ResidentRoomConditionFormGUI extends JFrame implements ActionListen
 		layoutConstraints.gridx = 2;
 		add(submitButton, layoutConstraints);
 		
-		
-		
 		this.setVisible(true);
 		
 		
