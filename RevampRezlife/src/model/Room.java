@@ -14,6 +14,8 @@ public class Room {
 		roomNumber = 555;
 		maxOccupancy = 2;
 		rcfList = new ArrayList<RoomConditionForm>();
+		roomAttributes = new ArrayList<RoomAttribute>();
+		generateRoomAttribute();
 	}
 	
 	public void generateRoomAttribute(){

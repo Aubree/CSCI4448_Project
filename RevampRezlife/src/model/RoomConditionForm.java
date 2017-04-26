@@ -36,4 +36,26 @@ public class RoomConditionForm {
 	public ArrayList<RoomAttribute> getRoomAttributes(){
 		return roomAttributeList;
 	}
+	
+	public String getCondition(Integer attributeId){
+		for(int i = 0; i < roomAttributeList.size(); i++){
+			if(roomAttributeList.get(i).getAttributeId() == attributeId){
+				if(roomAttributeList.get(i).getStatus() == RoomAttributeState.GOOD){
+					return "Good";
+				}
+				else if (roomAttributeList.get(i).getStatus() == RoomAttributeState.DAMAGED){
+					return "Damaged";
+				}
+				else if (roomAttributeList.get(i).getStatus() == RoomAttributeState.MISSING){
+					return "Missing";
+				}
+				else if (roomAttributeList.get(i).getStatus() == RoomAttributeState.POOR){
+					return "Poor";
+				}
+				
+			}
+			
+		}
+		return "";
+	}
 }
