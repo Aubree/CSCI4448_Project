@@ -59,7 +59,8 @@ public class Room {
 				return rcfList.get(i);
 			}
 		}
-		return null;
+		generateRCF(CU_Id);
+		return getRCF(CU_Id);
 	}
 
 
