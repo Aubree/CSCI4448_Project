@@ -88,7 +88,17 @@ public class ResidentRoomConditionFormGUI extends JFrame implements ActionListen
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
+		Object object = arg0.getSource();
+		
+		if (object == editCommentButton) {
+			System.out.println("Edit Comments Button Pushed");
+		}
+		if (object == modifyStateButton) {
+			System.out.println("Modify State Button Pushed");
+		}
+		if (object == submitButton) {
+			System.out.println("Submit Button Pushed");
+		}
 		
 	}
 
