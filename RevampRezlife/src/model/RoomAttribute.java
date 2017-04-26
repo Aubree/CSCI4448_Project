@@ -7,6 +7,10 @@ public class RoomAttribute {
 	private String description;
 	private String comment;
 	
+	public RoomAttribute(String _name){
+		this.name = _name;
+		status = RoomAttributeState.GOOD;
+	}
 	public RoomAttributeState getStatus(){
 		return status;
 	}

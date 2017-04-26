@@ -47,13 +47,19 @@ public class Room {
 		this.maxOccupancy = maxOccupancy;
 	}
 	
-	private void generateRCF(){
+	private void generateRCF(Integer CU_Id){
 		//adds attributes to rcf
-		RoomConditionForm newRCF = new RoomConditionForm(roomAttributes);
+		RoomConditionForm newRCF = new RoomConditionForm(roomAttributes, CU_Id);
 		rcfList.add(newRCF);
-		
-		
-		
+	}
+	
+	public RoomConditionForm getRCF(Integer CU_Id){
+		for (int i = 0; i < rcfList.size(); i++) {
+			if (rcfList.get(i).getCU_Id() == CU_Id){
+				return rcfList.get(i);
+			}
+		}
+		return null;
 	}
 
 
