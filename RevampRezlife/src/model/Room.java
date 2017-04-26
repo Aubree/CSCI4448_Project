@@ -49,6 +49,11 @@ public class Room {
 	
 	private void generateRCF(){
 		//adds attributes to rcf
+		RoomConditionForm newRCF = new RoomConditionForm(roomAttributes);
+		rcfList.add(newRCF);
+		
+		
+		
 	}
 
 

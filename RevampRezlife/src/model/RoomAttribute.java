@@ -27,6 +27,10 @@ public class RoomAttribute {
 		return name;
 	}
 	
+	public void setComment(String _comment){
+		this.comment = _comment;
+	}
+	
 	public Integer getAttributeId(){
 		return attribute_id;
 	}
