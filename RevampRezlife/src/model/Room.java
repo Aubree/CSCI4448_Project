@@ -16,6 +16,15 @@ public class Room {
 		rcfList = new ArrayList<RoomConditionForm>();
 	}
 	
+	public void generateRoomAttribute(){
+		String item_name = "item";
+		
+		for (int i = 0; i < 10; i++) {
+			roomAttributes.add(new RoomAttribute(item_name + i));
+		}
+	}
+	
+	
 	public void addResident(ResidentProfile resident) {
 		residentsList.add(resident);
 	}
