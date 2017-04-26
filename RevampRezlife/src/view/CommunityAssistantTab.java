@@ -23,7 +23,6 @@ public class CommunityAssistantTab extends JPanel implements ActionListener{
 	
 	public CommunityAssistantTab(CommunityAssistant user) {
 		ca_controller = new CommunityAssistantController(user);
-		
 		setLayout(new GridBagLayout());
 		buildGUI();
 	}

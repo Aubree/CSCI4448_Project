@@ -17,8 +17,8 @@ public class LogInGUI extends JFrame implements ActionListener{
 	private JPasswordField passwordField;
 	private JButton submitButton;
 	
-	private Integer HEIGHT = 100;
-	private Integer WIDTH = 250;
+	private Integer HEIGHT = 500;
+	private Integer WIDTH = 500;
 	
 	public LogInGUI() {
 		loginController = new LogInController();
