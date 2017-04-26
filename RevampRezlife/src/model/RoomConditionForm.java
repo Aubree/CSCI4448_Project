@@ -33,6 +33,10 @@ public class RoomConditionForm {
 		complete = true;
 	}
 	
+	public Boolean isFinalized(RoomConditionForm rcf){
+		return complete; 
+	}
+	
 	public ArrayList<RoomAttribute> getRoomAttributes(){
 		return roomAttributeList;
 	}
