@@ -6,6 +6,7 @@ import java.util.Collection;
 import model.CUMember;
 import model.DeskItem;
 import model.FrontDesk;
+import model.RoomConditionForm;
 
 public class ResidentController {
 	private CUMember user;
@@ -34,5 +35,9 @@ public class ResidentController {
 			}
 		}
 		return desk_items;
+	}
+	
+	public void submitRCF(RoomConditionForm rcf) {
+		rcf.finalize();
 	}
 }

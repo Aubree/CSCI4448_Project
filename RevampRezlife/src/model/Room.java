@@ -13,7 +13,19 @@ public class Room {
 		// Default Room
 		roomNumber = 555;
 		maxOccupancy = 2;
+		rcfList = new ArrayList<RoomConditionForm>();
+		roomAttributes = new ArrayList<RoomAttribute>();
+		generateRoomAttribute();
 	}
+	
+	public void generateRoomAttribute(){
+		String item_name = "item";
+		
+		for (int i = 0; i < 10; i++) {
+			roomAttributes.add(new RoomAttribute(item_name + i));
+		}
+	}
+	
 	
 	public void addResident(ResidentProfile resident) {
 		residentsList.add(resident);
@@ -47,13 +59,20 @@ public class Room {
 		this.maxOccupancy = maxOccupancy;
 	}
 	
-	private void generateRCF(){
+	private void generateRCF(Integer CU_Id){
 		//adds attributes to rcf
-		RoomConditionForm newRCF = new RoomConditionForm(roomAttributes);
+		RoomConditionForm newRCF = new RoomConditionForm(roomAttributes, CU_Id);
 		rcfList.add(newRCF);
-		
-		
-		
+	}
+	
+	public RoomConditionForm getRCF(Integer CU_Id){
+		for (int i = 0; i < rcfList.size(); i++) {
+			if (rcfList.get(i).getCU_Id() == CU_Id){
+				return rcfList.get(i);
+			}
+		}
+		generateRCF(CU_Id);
+		return getRCF(CU_Id);
 	}
 
 

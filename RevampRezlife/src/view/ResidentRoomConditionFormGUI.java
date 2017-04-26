@@ -81,8 +81,6 @@ public class ResidentRoomConditionFormGUI extends JFrame implements ActionListen
 		layoutConstraints.gridx = 2;
 		add(submitButton, layoutConstraints);
 		
-		
-		
 		this.setVisible(true);
 		
 		
@@ -90,7 +88,20 @@ public class ResidentRoomConditionFormGUI extends JFrame implements ActionListen
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
+		Object object = arg0.getSource();
+		
+		if (object == editCommentButton) {
+			System.out.println("Edit Comments Button Pushed");
+		}
+		if (object == modifyStateButton) {
+			System.out.println("Modify State Button Pushed");
+		}
+		if (object == submitButton) {
+			int choice = JOptionPane.showConfirmDialog(null, "Are you sure you want to finalize your Room Condition Form?");
+			if (choice == JOptionPane.YES_OPTION) {
+				System.out.println("Submit Button Pushed");
+			}
+		}
 		
 	}
 
