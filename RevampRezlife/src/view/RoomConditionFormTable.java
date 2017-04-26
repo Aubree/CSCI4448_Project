@@ -32,7 +32,7 @@ public class RoomConditionFormTable extends JTable {
 			RoomAttribute roomattr = roomConditionForm.getRoomAttributes().get(i);
 			String element_name = roomattr.getName();
 			String description = roomattr.getDescription();
-			String condition = "good";
+			String condition = roomConditionForm.getCondition(roomattr.getAttributeId());
 			String comment = roomattr.getComment();
 			rcfTableModel.addRow(new Object[] {element_name, description, condition, comment});
 			

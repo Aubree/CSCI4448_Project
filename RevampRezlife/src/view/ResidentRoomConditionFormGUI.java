@@ -97,7 +97,10 @@ public class ResidentRoomConditionFormGUI extends JFrame implements ActionListen
 			System.out.println("Modify State Button Pushed");
 		}
 		if (object == submitButton) {
-			System.out.println("Submit Button Pushed");
+			int choice = JOptionPane.showConfirmDialog(null, "Are you sure you want to finalize your Room Condition Form?");
+			if (choice == JOptionPane.YES_OPTION) {
+				System.out.println("Submit Button Pushed");
+			}
 		}
 		
 	}
