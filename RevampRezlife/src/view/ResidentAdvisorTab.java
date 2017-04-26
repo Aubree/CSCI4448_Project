@@ -11,6 +11,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 import model.CUMember;
+import model.ResidentAdvisor;
 
 import controller.ResidentAdvisorController;
 
@@ -28,8 +29,8 @@ public class ResidentAdvisorTab extends JPanel implements ActionListener{
 	private JButton manage_rcf_button;
 	private JButton manage_roommate_agreement_button;
 	
-	public ResidentAdvisorTab(CUMember user) {
-		resident_advisor_controller = new ResidentAdvisorController();
+	public ResidentAdvisorTab(ResidentAdvisor user) {
+		resident_advisor_controller = new ResidentAdvisorController(user);
 		layoutConstraints = new GridBagConstraints();
 		
 		setLayout(new GridBagLayout());

@@ -35,10 +35,10 @@ public class HomeGUI extends JFrame {
 		ArrayList<CU_Job> jobs = cu_member.getJob_list();
 		for (int i = 0; i < jobs.size(); i++) {
 			if (jobs.get(i).getJob_title().equals("Resident Advisor")) {
-				tab_panels.add(new ResidentAdvisorTab(cu_member));
+				tab_panels.add(new ResidentAdvisorTab((ResidentAdvisor) jobs.get(i)));
 			}
 			if (jobs.get(i).getJob_title().equals("Community Assistant")) {
-				tab_panels.add(new CommunityAssistantTab(cu_member));
+				tab_panels.add(new CommunityAssistantTab((CommunityAssistant) jobs.get(i)));
 			}
 			tabbed_pane.addTab(jobs.get(i).getJob_title(), tab_panels.get(tab_panels.size()-1));
 		}

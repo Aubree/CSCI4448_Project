@@ -10,6 +10,7 @@ import javax.swing.*;
 import controller.CommunityAssistantController;
 
 import model.CUMember;
+import model.CommunityAssistant;
 
 public class CommunityAssistantTab extends JPanel implements ActionListener{
 	private CommunityAssistantController ca_controller;
@@ -20,8 +21,8 @@ public class CommunityAssistantTab extends JPanel implements ActionListener{
 	private JButton return_temporary_key_button;
 	private JButton room_move_button;
 	
-	public CommunityAssistantTab(CUMember user) {
-		ca_controller = new CommunityAssistantController();
+	public CommunityAssistantTab(CommunityAssistant user) {
+		ca_controller = new CommunityAssistantController(user);
 		
 		setLayout(new GridBagLayout());
 		buildGUI();
