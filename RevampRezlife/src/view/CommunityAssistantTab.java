@@ -53,9 +53,7 @@ public class CommunityAssistantTab extends JPanel implements ActionListener{
 		room_move_button = new JButton("Room Move");
 		room_move_button.addActionListener(this);
 		layoutConstraints.gridy = 3;
-		add(room_move_button, layoutConstraints);
-		
-		
+		add(room_move_button, layoutConstraints);		
 	}
 
 	@Override
@@ -65,6 +63,7 @@ public class CommunityAssistantTab extends JPanel implements ActionListener{
 			System.out.println("Item Manager Button Pushed");
 		}
 		if (object == make_temporary_key_button) {
+			new CommunityAssistantMakeTempKeyGUI(ca_controller);
 			System.out.println("Make Temporary Key Button Pushed");
 		}
 		if (object == return_temporary_key_button) {
