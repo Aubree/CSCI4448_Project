@@ -16,4 +16,9 @@ public class CheckedOut implements ItemState {
 	public String toString() {
 		return "Checked Out";
 	}
+
+
+	public Boolean isAvailableForCheckout() {
+		return false;
+	}
 }

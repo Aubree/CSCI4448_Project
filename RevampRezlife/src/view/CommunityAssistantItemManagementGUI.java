@@ -8,6 +8,9 @@ import java.awt.event.ActionListener;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
+import java.util.*;
+
+import model.DeskItem;
 import model.ResidentProfile;
 import controller.CommunityAssistantController;
 
@@ -69,9 +72,14 @@ public class CommunityAssistantItemManagementGUI extends JFrame implements Actio
 		
 		if (object == checkout_item_button) {
 			caController.checkoutItem(itemTable.getSelectedRow());
+			this.dispose();
+			new CommunityAssistantItemManagementGUI(caController);
+			
 		}
 		if (object == check_in_item_button) {
 			caController.checkinItem(itemTable.getSelectedRow());
+			this.dispose();
+			new CommunityAssistantItemManagementGUI(caController);
 		}
 		
 	}

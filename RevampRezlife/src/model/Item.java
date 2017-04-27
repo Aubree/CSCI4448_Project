@@ -29,8 +29,21 @@ public abstract class Item {
 		return itemState;
 	}
 
-	public void setItemState(ItemState itemState) {
+	private void setItemState(ItemState itemState) {
 		this.itemState = itemState;
 	}
+	
+	public Boolean isAvailableForCheckout() {
+		return this.itemState.isAvailableForCheckout();
+	}
+	
+	public void checkoutItem() {
+		setItemState(new CheckedOut());
+	}
+	
+	public void checkInItem() {
+		setItemState(new CheckedIn());
+	}
+	
 
 }

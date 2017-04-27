@@ -14,4 +14,9 @@ public class CheckedIn implements ItemState {
 	public String toString() {
 		return new String("Checked In");
 	}
+
+	@Override
+	public Boolean isAvailableForCheckout() {
+		return true;
+	}
 }

@@ -55,11 +55,13 @@ public class CommunityAssistantController {
 	}
 	
 	public void checkoutItem(Integer item_id) {
-		System.out.println("Item " + item_id + " selected for checkout");
+		if (deskItemsList.get(item_id).isAvailableForCheckout()) {
+			deskItemsList.get(item_id).checkoutItem();
+		}
 	}
 	
 	public void checkinItem(Integer item_id) {
-		System.out.println("Item " + item_id + " selected for checkin");
+		deskItemsList.get(item_id).checkInItem();
 	}
 	
 }

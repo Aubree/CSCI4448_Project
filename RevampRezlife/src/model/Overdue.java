@@ -18,4 +18,8 @@ public class Overdue implements ItemState {
 	public String toString() {
 		return "Overdue";
 	}
+
+	public Boolean isAvailableForCheckout() {
+		return false;
+	}
 }
