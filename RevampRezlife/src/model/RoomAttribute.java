@@ -13,6 +13,14 @@ public class RoomAttribute {
 		description = "description";
 		comment = "comment";
 	}
+	public RoomAttribute(RoomAttribute roomAttribute){
+		 this.name = roomAttribute.name;
+		 this.attribute_id = roomAttribute.attribute_id;
+		 this.status = roomAttribute.status;
+		 this.description = roomAttribute.description;
+		 this.comment = roomAttribute.comment;
+	}
+	
 	public RoomAttributeState getStatus(){
 		return status;
 	}

@@ -8,8 +8,10 @@ public class RoomConditionForm {
 	
 	
 	public RoomConditionForm(ArrayList<RoomAttribute> _roomAttributes, Integer _CU_Id) {
-		this.roomAttributeList = _roomAttributes;
-		complete = false;
+		roomAttributeList = new ArrayList<RoomAttribute>();
+		for(int i = 0; i < _roomAttributes.size(); i++){
+			roomAttributeList.add(new RoomAttribute(_roomAttributes.get(i)));
+		}
 		this.CU_Id = _CU_Id;
 	}
 	
@@ -62,4 +64,33 @@ public class RoomConditionForm {
 		}
 		return "";
 	}
+	
+	public void setComment(String _comment,Integer attributeId){
+		for(int i = 0; i < roomAttributeList.size(); i++){
+			if(roomAttributeList.get(i).getAttributeId() == attributeId){
+				roomAttributeList.get(i).setComment(_comment);
+			}
+		}
+	}
+	
+	public void setState(String _state,Integer attributeId){
+		for(int i = 0; i < roomAttributeList.size(); i++){
+			if(roomAttributeList.get(i).getAttributeId() == attributeId){
+				if(_state.equals("GOOD")){
+					roomAttributeList.get(i).setStatus(RoomAttributeState.GOOD);
+				}
+				else if (_state.equals("DAMAGED")){
+					roomAttributeList.get(i).setStatus(RoomAttributeState.DAMAGED);
+				}
+				else if (_state.equals("MISSING")){
+					roomAttributeList.get(i).setStatus(RoomAttributeState.MISSING);
+				}
+				else if (_state.equals("POOR")){
+					roomAttributeList.get(i).setStatus(RoomAttributeState.POOR);
+				}
+			}
+		}
+	}
+	
+	
 }

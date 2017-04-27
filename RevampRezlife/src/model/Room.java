@@ -67,13 +67,12 @@ public class Room {
 	
 	public RoomConditionForm getRCF(Integer CU_Id){
 		for (int i = 0; i < rcfList.size(); i++) {
-			if (rcfList.get(i).getCU_Id() == CU_Id){
+			if (rcfList.get(i).getCU_Id().equals(CU_Id)){
 				return rcfList.get(i);
 			}
 		}
 		generateRCF(CU_Id);
 		return getRCF(CU_Id);
 	}
-
 
 }
