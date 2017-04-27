@@ -13,16 +13,16 @@ import model.CUMember;
 import model.CommunityAssistant;
 
 public class CommunityAssistantTab extends JPanel implements ActionListener{
-	private CommunityAssistantController ca_controller;
+	private CommunityAssistantController caController;
 	private GridBagConstraints layoutConstraints;
 	
-	private JButton item_manager_button;
-	private JButton make_temporary_key_button;
-	private JButton return_temporary_key_button;
-	private JButton room_move_button;
+	private JButton itemManagerButton;
+	private JButton makeTemporaryKeyButton;
+	private JButton returnTemporaryKeyButton;
+	private JButton roomMoveButton;
 	
 	public CommunityAssistantTab(CommunityAssistant user) {
-		ca_controller = new CommunityAssistantController(user);
+		caController = new CommunityAssistantController(user);
 		setLayout(new GridBagLayout());
 		buildGUI();
 	}
@@ -30,45 +30,46 @@ public class CommunityAssistantTab extends JPanel implements ActionListener{
 	private void buildGUI() {
 		layoutConstraints = new GridBagConstraints();
 		
-		item_manager_button = new JButton("Item Check-out/Check-in");
-		item_manager_button.addActionListener(this);
+		itemManagerButton = new JButton("Item Check-out/Check-in");
+		itemManagerButton.addActionListener(this);
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridx = 0;
 		layoutConstraints.gridy = 0;
 		layoutConstraints.gridwidth = 1;
 		layoutConstraints.gridheight = 1;
-		add(item_manager_button, layoutConstraints);
+		add(itemManagerButton, layoutConstraints);
 		
-		make_temporary_key_button = new JButton("Make Temporary Key");
-		make_temporary_key_button.addActionListener(this);
+		makeTemporaryKeyButton = new JButton("Make Temporary Key");
+		makeTemporaryKeyButton.addActionListener(this);
 		layoutConstraints.gridy = 1;
-		add(make_temporary_key_button, layoutConstraints);
+		add(makeTemporaryKeyButton, layoutConstraints);
 		
-		return_temporary_key_button = new JButton("Return Temporary Key");
-		return_temporary_key_button.addActionListener(this);
+		returnTemporaryKeyButton = new JButton("Return Temporary Key");
+		returnTemporaryKeyButton.addActionListener(this);
 		layoutConstraints.gridy = 2;
-		add(return_temporary_key_button, layoutConstraints);
+		add(returnTemporaryKeyButton, layoutConstraints);
 		
-		room_move_button = new JButton("Room Move");
-		room_move_button.addActionListener(this);
+		roomMoveButton = new JButton("Room Move");
+		roomMoveButton.addActionListener(this);
 		layoutConstraints.gridy = 3;
-		add(room_move_button, layoutConstraints);		
+		add(roomMoveButton, layoutConstraints);		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent ae) {
 		Object object = ae.getSource();
-		if (object == item_manager_button) {
+		if (object == itemManagerButton) {
+			new CommunityAssistantItemManagementGUI(caController);
 			System.out.println("Item Manager Button Pushed");
 		}
-		if (object == make_temporary_key_button) {
-			new CommunityAssistantMakeTempKeyGUI(ca_controller);
+		if (object == makeTemporaryKeyButton) {
+			new CommunityAssistantMakeTempKeyGUI(caController);
 			System.out.println("Make Temporary Key Button Pushed");
 		}
-		if (object == return_temporary_key_button) {
+		if (object == returnTemporaryKeyButton) {
 			System.out.println("Return Temporary Key Button Pushed");
 		}
-		if (object == room_move_button) {
+		if (object == roomMoveButton) {
 			System.out.println("Room Move Button Pushed");
 		}
 	}

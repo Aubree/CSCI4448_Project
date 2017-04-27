@@ -1,10 +1,15 @@
 package controller;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import model.CUMember;
 import model.CommunityAssistant;
+import model.DeskItem;
+import model.FrontDesk;
 
 public class CommunityAssistantController {
 	private CommunityAssistant user;
@@ -34,6 +39,18 @@ public class CommunityAssistantController {
 	}
 	public CUMember getUser() {
 		return resident;
+	}
+	
+	public Collection<DeskItem> viewDeskItems() {
+		ArrayList<FrontDesk> front_desks = user.getBuildingWorked().getFrontDesks();
+		ArrayList<DeskItem> desk_items = new ArrayList<DeskItem>();
+		for (int i = 0; i < front_desks.size(); i++) {
+			FrontDesk desk = front_desks.get(i);
+			for (int j = 0; j < desk.getDeskItems().size(); j++) {
+				desk_items.add(desk.getDeskItem(j));
+			}
+		}
+		return desk_items;
 	}
 	
 }
