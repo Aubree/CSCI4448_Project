@@ -119,6 +119,7 @@ public class ResidentAdvisorTab extends JPanel implements ActionListener{
 			System.out.println("Email Button Pressed");
 		}
 		if (object == check_in_button) {
+			CheckInGUI checkIn = new CheckInGUI();
 			System.out.println("Check In Button Pressed");
 		}
 		if (object == check_out_button) {
