@@ -19,7 +19,6 @@ public class ItemTable extends JTable {
 		}
 	};
 	
-	
 	public ItemTable(ResidentController resident_controller) {
 		ArrayList<DeskItem> desk_items = (ArrayList<DeskItem>) resident_controller.viewDeskItems();
 		

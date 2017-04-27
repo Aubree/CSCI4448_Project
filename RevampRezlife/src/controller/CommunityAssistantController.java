@@ -14,6 +14,7 @@ import model.FrontDesk;
 public class CommunityAssistantController {
 	private CommunityAssistant user;
 	private CUMember resident;
+	private ArrayList<DeskItem> deskItemsList;
 	
 	
 	public CommunityAssistantController(CommunityAssistant ca) {
@@ -43,14 +44,22 @@ public class CommunityAssistantController {
 	
 	public Collection<DeskItem> viewDeskItems() {
 		ArrayList<FrontDesk> front_desks = user.getBuildingWorked().getFrontDesks();
-		ArrayList<DeskItem> desk_items = new ArrayList<DeskItem>();
+		deskItemsList = new ArrayList<DeskItem>();
 		for (int i = 0; i < front_desks.size(); i++) {
 			FrontDesk desk = front_desks.get(i);
 			for (int j = 0; j < desk.getDeskItems().size(); j++) {
-				desk_items.add(desk.getDeskItem(j));
+				deskItemsList.add(desk.getDeskItem(j));
 			}
 		}
-		return desk_items;
+		return deskItemsList;
+	}
+	
+	public void checkoutItem(Integer item_id) {
+		System.out.println("Item " + item_id + " selected for checkout");
+	}
+	
+	public void checkinItem(Integer item_id) {
+		System.out.println("Item " + item_id + " selected for checkin");
 	}
 	
 }

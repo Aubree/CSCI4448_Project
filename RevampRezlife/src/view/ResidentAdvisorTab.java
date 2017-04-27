@@ -115,6 +115,7 @@ public class ResidentAdvisorTab extends JPanel implements ActionListener{
 	public void actionPerformed(ActionEvent ae) {
 		Object object = ae.getSource();
 		if (object == email_button) {
+			
 			System.out.println("Email Button Pressed");
 		}
 		if (object == check_in_button) {
