@@ -85,16 +85,33 @@ public class ResidentRoomConditionFormGUI extends JFrame implements ActionListen
 		
 		
 	}
-
+	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		Object object = arg0.getSource();
-		
+	
 		if (object == editCommentButton) {
+			String commentChoice = JOptionPane.showInputDialog(null, "Please Edit Comment", "Edit Comment");
+			residentController.changeComment(commentChoice, roomConditionFormTable.getSelectedRow());
 			System.out.println("Edit Comments Button Pushed");
+			
 		}
 		if (object == modifyStateButton) {
+			
+			Object[] possibilities = {"MISSING", "BAD", "GOOD", "DAMAGED"};
+			String stateChoice = (String)JOptionPane.showInputDialog(
+			                    null,
+			                    "Pick new State\n",
+			                    "Change State",
+			                    JOptionPane.PLAIN_MESSAGE,
+			                    null,
+			                    possibilities,
+			                    "GOOD");
+			residentController.chageState(stateChoice, roomConditionFormTable.getSelectedRow());
+			
+			roomConditionFormTable.updateUI();
 			System.out.println("Modify State Button Pushed");
+			
 		}
 		if (object == submitButton) {
 			int choice = JOptionPane.showConfirmDialog(null, "Are you sure you want to finalize your Room Condition Form?");
