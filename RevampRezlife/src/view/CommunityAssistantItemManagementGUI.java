@@ -70,17 +70,16 @@ public class CommunityAssistantItemManagementGUI extends JFrame implements Actio
 	public void actionPerformed(ActionEvent arg0) {
 		Object object = arg0.getSource();
 		
+		Integer item_id = itemTable.getSelectedRow();
 		if (object == checkout_item_button) {
-			caController.checkoutItem(itemTable.getSelectedRow());
-			this.dispose();
-			new CommunityAssistantItemManagementGUI(caController);
-			
+			caController.checkoutItem(item_id);
+
 		}
 		if (object == check_in_item_button) {
-			caController.checkinItem(itemTable.getSelectedRow());
-			this.dispose();
-			new CommunityAssistantItemManagementGUI(caController);
+			caController.checkinItem(item_id);
 		}
+		String new_state = caController.getDeskItemState(item_id);
+		itemTable.getModel().setValueAt(new_state, item_id, 1);
 		
 	}
 

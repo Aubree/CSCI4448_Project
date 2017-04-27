@@ -10,6 +10,7 @@ import model.CUMember;
 import model.CommunityAssistant;
 import model.DeskItem;
 import model.FrontDesk;
+import model.ItemState;
 
 public class CommunityAssistantController {
 	private CommunityAssistant user;
@@ -52,6 +53,10 @@ public class CommunityAssistantController {
 			}
 		}
 		return deskItemsList;
+	}
+	
+	public String getDeskItemState(Integer item_id) {
+		return deskItemsList.get(item_id).getItemState().toString();
 	}
 	
 	public void checkoutItem(Integer item_id) {
