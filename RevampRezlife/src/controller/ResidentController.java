@@ -40,4 +40,10 @@ public class ResidentController {
 	public void submitRCF(RoomConditionForm rcf) {
 		rcf.finalize();
 	}
+	public void changeComment(String comment, Integer index){
+		user.getResident_profile().getPresentRoom().getRCF(user.getCu_id()).setComment(comment, index);
+	}
+	public void chageState(String state, Integer index){
+		user.getResident_profile().getPresentRoom().getRCF(user.getCu_id()).setState(state, index);
+	}
 }
