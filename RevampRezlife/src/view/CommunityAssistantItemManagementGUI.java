@@ -65,7 +65,14 @@ public class CommunityAssistantItemManagementGUI extends JFrame implements Actio
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
+		Object object = arg0.getSource();
+		
+		if (object == checkout_item_button) {
+			System.out.println("Checkout Item Button Pressed");
+		}
+		if (object == check_in_item_button) {
+			System.out.println("Check In Item Button Pressed");
+		}
 		
 	}
 

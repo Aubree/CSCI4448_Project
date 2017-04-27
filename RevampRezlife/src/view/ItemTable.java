@@ -12,12 +12,16 @@ import controller.CommunityAssistantController;
 import controller.ResidentController;
 
 public class ItemTable extends JTable {
-	private DefaultTableModel itemTableModel;
+	private DefaultTableModel itemTableModel = new DefaultTableModel() {
+		@Override
+		public boolean isCellEditable(int row, int column) {
+			return false;
+		}
+	};
 	
 	
 	public ItemTable(ResidentController resident_controller) {
 		ArrayList<DeskItem> desk_items = (ArrayList<DeskItem>) resident_controller.viewDeskItems();
-		itemTableModel = new DefaultTableModel();
 		
 		String header[] = new String[] {"Item Name", "Current Status"};
 		itemTableModel.setColumnIdentifiers(header);
@@ -35,7 +39,6 @@ public class ItemTable extends JTable {
 	
 	public ItemTable(CommunityAssistantController ca_controller) {
 		ArrayList<DeskItem> desk_items = (ArrayList<DeskItem>) ca_controller.viewDeskItems();
-		itemTableModel = new DefaultTableModel();
 		
 		String header[] = new String[] {"Item Name", "Current Status"};
 		itemTableModel.setColumnIdentifiers(header);
