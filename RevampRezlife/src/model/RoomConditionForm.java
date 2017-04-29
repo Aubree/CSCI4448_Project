@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 public class RoomConditionForm {
-	private Boolean complete;
+	private Boolean complete = false;
 	private ArrayList<RoomAttribute> roomAttributeList;
 	private Integer CU_Id;
 	
