@@ -1,10 +1,14 @@
 package model;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public abstract class Item {
 	protected String itemName;
 	protected ItemState itemState;
 	protected Integer lateFeeCharge;
 	protected Integer itemID;
+	protected static String storageFileName;
 	
 	public Item(String item_name, ItemState item_state, Integer late_fee_charge, Integer item_id) {
 		itemName = item_name;
@@ -29,6 +33,10 @@ public abstract class Item {
 
 	public ItemState getItemState() {
 		return itemState;
+	}
+	
+	public String getStorageFileName() {
+		return storageFileName;
 	}
 
 	private void setItemState(ItemState itemState) {
