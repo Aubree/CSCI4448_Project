@@ -123,6 +123,7 @@ public class ResidentAdvisorTab extends JPanel implements ActionListener{
 			System.out.println("Check In Button Pressed");
 		}
 		if (object == check_out_button) {
+			CheckOutGUI checkOut = new CheckOutGUI();
 			System.out.println("Check Out Button Pressed");
 		}
 		if (object == manage_121_button) {

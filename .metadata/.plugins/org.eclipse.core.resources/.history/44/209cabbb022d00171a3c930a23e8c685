@@ -1,0 +1,44 @@
+package view;
+import java.awt.Component;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class CheckOutGUI {
+
+	
+	public static void main(String[] args) {
+	JFrame frame = new JFrame("Check-Out GUI");
+    frame.setVisible(true);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(1000, 500);
+	frame.setLocation(430, 100);
+	
+    JPanel panel = new JPanel();
+    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+    frame.add(panel);
+
+    JLabel lbl = new JLabel("Select a resident to check out.");
+    lbl.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+    panel.add(lbl);
+    String[] choices = { "Tom","Dick", "Harry"};
+    final JComboBox<String> residents = new JComboBox<String>(choices);
+
+	    residents.setVisible(true);
+	    panel.add(residents);
+
+	    JButton btn = new JButton("OK");
+	    btn.setAlignmentX(Component.CENTER_ALIGNMENT);
+	    panel.add(btn);
+	    
+	    frame.setVisible(true);
+
+		
+	}
+}
