@@ -43,15 +43,17 @@ public class CommunityAssistantController {
 		return resident;
 	}
 	
-	public Collection<DeskItem> viewDeskItems() {
+	public ArrayList<DeskItem> viewDeskItems() {
 		ArrayList<FrontDesk> front_desks = user.getBuildingWorked().getFrontDesks();
-		deskItemsList = new ArrayList<DeskItem>();
-		for (int i = 0; i < front_desks.size(); i++) {
-			FrontDesk desk = front_desks.get(i);
-			for (int j = 0; j < desk.getDeskItems().size(); j++) {
-				deskItemsList.add(desk.getDeskItem(j));
-			}
-		}
+		deskItemsList = front_desks.get(0).getDeskItems();
+
+//		deskItemsList = new ArrayList<DeskItem>();
+//		for (int i = 0; i < front_desks.size(); i++) {
+//			FrontDesk desk = front_desks.get(i);
+//			for (int j = 0; j < desk.getDeskItems().size(); j++) {
+//				deskItemsList.add(desk.getDeskItem(j));
+//			}
+//		}
 		return deskItemsList;
 	}
 	
@@ -61,6 +63,7 @@ public class CommunityAssistantController {
 	
 	public void checkoutItem(Integer item_id) {
 		if (deskItemsList.get(item_id).isAvailableForCheckout()) {
+			System.out.println("item is available for checkout");
 			deskItemsList.get(item_id).checkoutItem();
 		}
 	}

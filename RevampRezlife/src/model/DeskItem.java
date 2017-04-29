@@ -18,19 +18,33 @@ public class DeskItem extends Item {
 		return item_string;
 	}
 
-	@Override
-	public Item getItemFromString(String line_in) {
+	public DeskItem getItemFromString(String line_in) {
 		String[] tokens = line_in.split(",");
 		String itemname;
 		Integer itemid;
 		Integer itemfeecharge;
-		ItemState itemstate;
+		ItemState itemstate = new CheckedIn();
 		
-		for (int i = 0; i < tokens.length; i++) {
-			System.out.println(tokens[i]);
+		itemid = Integer.parseInt(tokens[0]);
+		itemname = tokens[1];
+		
+		String itemstatestring = tokens[2];
+		if (itemstatestring.equals("Checked In")) {
+			itemstate = new CheckedIn();
+		}
+		if (itemstatestring.equals("Checked Out")) {
+			itemstate = new CheckedOut();
+		}
+		if (itemstatestring.equals("Overdue")) {
+			itemstate = new Overdue();
 		}
 		
-		return null;
+		itemfeecharge = Integer.parseInt(tokens[3]);
+		
+		
+		
+		
+		return new DeskItem(itemname, itemstate, itemfeecharge, itemid);
 	}
 
 }
