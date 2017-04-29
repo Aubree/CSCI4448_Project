@@ -96,7 +96,6 @@ public class ResidentTab extends JPanel implements ActionListener {
 			new ResidentItemCheckoutGUI(resident_controller);
 		}
 		if (object == review_RCF_button) {
-			//if (resident_controller.getUser().getResident_profile().getPresentRoom().getRCF(resident_controller.getUser().getCu_id()))
 			new ResidentRoomConditionFormGUI(resident_controller);
 			System.out.println("Review RCF Button Pushed");
 		}

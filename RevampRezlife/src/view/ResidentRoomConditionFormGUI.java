@@ -88,18 +88,38 @@ public class ResidentRoomConditionFormGUI extends JFrame implements ActionListen
 	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
+		
 		Object object = arg0.getSource();
-	
+		int item_id = roomConditionFormTable.getSelectedRow();
+		String stateChoice = "";
+		String commentChoice = "";
+		Boolean isFinalized = residentController.getUser().getResident_profile()
+				.getPresentRoom()
+				.getRCF(residentController.getUser().getCu_id())
+				.isFinalized(residentController.getUser().getResident_profile()
+						.getPresentRoom().getRCF(residentController.getUser().getCu_id()));
+		
+		
 		if (object == editCommentButton) {
-			String commentChoice = JOptionPane.showInputDialog(null, "Please Edit Comment", "Edit Comment");
-			residentController.changeComment(commentChoice, roomConditionFormTable.getSelectedRow());
+			if(isFinalized.equals(true)){
+				JOptionPane.showMessageDialog(null, "RCF is already submited, you can no longer change status");
+			}
+			
+			else{
+			commentChoice = JOptionPane.showInputDialog(null, "Please Edit Comment", "Edit Comment");
+			residentController.changeComment(commentChoice, item_id);
+			roomConditionFormTable.getModel().setValueAt(commentChoice, item_id, 3);
 			System.out.println("Edit Comments Button Pushed");
-			
+			}
 		}
+		
 		if (object == modifyStateButton) {
-			
+			if(isFinalized.equals(true)){
+					JOptionPane.showMessageDialog(null, "RCF is already submited, you can no longer change status");
+				}
+			else {
 			Object[] possibilities = {"MISSING", "BAD", "GOOD", "DAMAGED"};
-			String stateChoice = (String)JOptionPane.showInputDialog(
+			stateChoice = (String)JOptionPane.showInputDialog(
 			                    null,
 			                    "Pick new State\n",
 			                    "Change State",
@@ -107,15 +127,23 @@ public class ResidentRoomConditionFormGUI extends JFrame implements ActionListen
 			                    null,
 			                    possibilities,
 			                    "GOOD");
-			residentController.chageState(stateChoice, roomConditionFormTable.getSelectedRow());
-			
-			roomConditionFormTable.updateUI();
+			residentController.chageState(stateChoice, item_id);
+			roomConditionFormTable.getModel().setValueAt(stateChoice, item_id, 2);
 			System.out.println("Modify State Button Pushed");
-			
+			}	
 		}
+		
+		
 		if (object == submitButton) {
 			int choice = JOptionPane.showConfirmDialog(null, "Are you sure you want to finalize your Room Condition Form?");
 			if (choice == JOptionPane.YES_OPTION) {
+				if(isFinalized.equals(true)){
+					JOptionPane.showMessageDialog(null, "RCF is already submited");
+				}
+				else {
+					residentController.getUser().getResident_profile()
+					.getPresentRoom().getRCF(residentController.getUser().getCu_id()).finalize();
+				}
 				System.out.println("Submit Button Pushed");
 			}
 		}
