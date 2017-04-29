@@ -32,14 +32,14 @@ public class CheckOutGUI extends JFrame {
 	private void buildCheckInGUI() {
 		layoutConstraints = new GridBagConstraints();
 		
-		headerLabel = new JLabel("New Resident Check Out Form:", JLabel.CENTER);
+		headerLabel = new JLabel("New Resident Check Out Form", JLabel.CENTER);
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridx = 0;
 		layoutConstraints.gridy = 0;
 		layoutConstraints.gridwidth = 2;
 		add(headerLabel, layoutConstraints);
 		
-		dropDownLabel = new JLabel("Choose Resident:  ");
+		dropDownLabel = new JLabel("Choose Resident:");
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridx = 0;
 		layoutConstraints.gridy = 1;
@@ -54,12 +54,12 @@ public class CheckOutGUI extends JFrame {
 		layoutConstraints.gridwidth = 2;
 		add(residents, layoutConstraints);
 		
-		submitButton = new JButton("Check Resident Out");
+		submitButton = new JButton("Create Resident");
 		//submitButton.addActionListener(this);
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridwidth = 1;
 		layoutConstraints.gridx = 1;
-		layoutConstraints.gridy = 3;
+		layoutConstraints.gridy = 2;
 		add(submitButton, layoutConstraints);
 		
 		setVisible(true);

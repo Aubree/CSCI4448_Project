@@ -59,7 +59,7 @@ public class CheckOutGUI extends JFrame {
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridwidth = 1;
 		layoutConstraints.gridx = 1;
-		layoutConstraints.gridy = 3;
+		layoutConstraints.gridy = 2;
 		add(submitButton, layoutConstraints);
 		
 		setVisible(true);

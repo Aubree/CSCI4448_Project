@@ -4,7 +4,6 @@ import java.awt.*;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -45,12 +44,6 @@ public class CheckInGUI extends JFrame {
 	
 	private void buildCheckInGUI() {
 		layoutConstraints = new GridBagConstraints();
-		
-		String[] choices = { "Tom","Dick", "Harry"};
-		final JComboBox<String> residents = new JComboBox<String>(choices);
-
-		residents.setVisible(true);
-		add(residents, layoutConstraints);
 		
 		headerLabel = new JLabel("New Resident Creation Form", JLabel.CENTER);
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;

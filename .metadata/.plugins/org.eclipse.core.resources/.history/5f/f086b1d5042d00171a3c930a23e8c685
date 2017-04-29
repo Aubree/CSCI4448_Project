@@ -18,7 +18,6 @@ public class CheckOutGUI extends JFrame {
 	private Integer HEIGHT = 300;
 	private Integer WIDTH = 400;
 	private JLabel headerLabel;
-	private JLabel dropDownLabel;
 	private JButton submitButton;
 	
 	public CheckOutGUI() {
@@ -32,21 +31,21 @@ public class CheckOutGUI extends JFrame {
 	private void buildCheckInGUI() {
 		layoutConstraints = new GridBagConstraints();
 		
-		headerLabel = new JLabel("New Resident Check Out Form:", JLabel.CENTER);
+		headerLabel = new JLabel("New Resident Check Out Form", JLabel.CENTER);
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridx = 0;
 		layoutConstraints.gridy = 0;
 		layoutConstraints.gridwidth = 2;
 		add(headerLabel, layoutConstraints);
 		
-		dropDownLabel = new JLabel("Choose Resident:  ");
+		firstNameLabel = new JLabel("Choose Resident:");
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridx = 0;
 		layoutConstraints.gridy = 1;
 		layoutConstraints.gridwidth = 1;
-		add(dropDownLabel, layoutConstraints);
+		add(firstNameLabel, layoutConstraints);
 		
-		String[] choices = { "Tom Smith","Dick Henry", "Harry Nutz"};
+		String[] choices = { "Tom","Dick", "Harry"};
 		final JComboBox<String> residents = new JComboBox<String>(choices);
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridx = 1;
@@ -54,12 +53,12 @@ public class CheckOutGUI extends JFrame {
 		layoutConstraints.gridwidth = 2;
 		add(residents, layoutConstraints);
 		
-		submitButton = new JButton("Check Resident Out");
+		submitButton = new JButton("Create Resident");
 		//submitButton.addActionListener(this);
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridwidth = 1;
 		layoutConstraints.gridx = 1;
-		layoutConstraints.gridy = 3;
+		layoutConstraints.gridy = 2;
 		add(submitButton, layoutConstraints);
 		
 		setVisible(true);
