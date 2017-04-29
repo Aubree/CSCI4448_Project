@@ -55,6 +55,8 @@ public abstract class Item {
 		setItemState(new CheckedIn());
 	}
 	
+	public abstract Item getItemFromString(String line_in);
+	
 
 	
 

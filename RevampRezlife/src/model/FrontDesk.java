@@ -21,16 +21,18 @@ public class FrontDesk {
 		temporaryKeyList = new ArrayList<TemporaryKey>();
 		deskID = "001";
 		
-		generateDefaultItems();
+		//generateDefaultItems();
+		readDeskItemsFromFile();
 	}
 	
 	private void readDeskItemsFromFile() {
 		String line;
 		try {
-			FileReader fr = new FileReader(DeskItem.storageFileName);
+			FileReader fr = new FileReader(new DeskItem().storageFileName);
 			BufferedReader br = new BufferedReader(fr);
 			while((line = br.readLine()) != null) {
-				System.out.println(line);
+				new DeskItem().getItemFromString(line);
+				//System.out.println(line);
 			}
 			fr.close();
 			
