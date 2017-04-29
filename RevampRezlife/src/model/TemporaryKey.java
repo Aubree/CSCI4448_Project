@@ -7,4 +7,10 @@ public class TemporaryKey extends Key {
 		transferable = true;
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

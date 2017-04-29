@@ -1,10 +1,10 @@
 package model;
 
 public abstract class Item {
-	private String itemName;
-	private ItemState itemState;
-	private Integer lateFeeCharge;
-	private Integer itemID;
+	protected String itemName;
+	protected ItemState itemState;
+	protected Integer lateFeeCharge;
+	protected Integer itemID;
 	
 	public Item(String item_name, ItemState item_state, Integer late_fee_charge, Integer item_id) {
 		itemName = item_name;
@@ -12,6 +12,8 @@ public abstract class Item {
 		lateFeeCharge = late_fee_charge;
 		itemID = item_id;
 	}
+	
+	public abstract String toString();
 	
 	public String getItemName() {
 		return itemName;
@@ -44,6 +46,8 @@ public abstract class Item {
 	public void checkInItem() {
 		setItemState(new CheckedIn());
 	}
+	
+
 	
 
 }

@@ -7,4 +7,10 @@ public class DeskItem extends Item {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	public String toString() {
+		String item_string = itemID + "," + itemName + "," +  itemState.toString() + "," + lateFeeCharge + "\n";
+		return item_string;
+	}
+
 }

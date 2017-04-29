@@ -6,5 +6,11 @@ public class BuffOneCard extends Key {
 		super(item_name, item_state, late_fee_charge, item_id);
 		transferable = false;
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }
