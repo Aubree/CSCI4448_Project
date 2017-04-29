@@ -42,10 +42,6 @@ public class CUMember {
 		job_list.add(new CommunityAssistant());
 	}
 	
-	public static void addUser(CUMember newbie){
-		member_list.add(newbie);
-	}
-	
 	public static CUMember lookUpUser(String username, String password){
 		for(int i=0; i < member_list.size(); i++){
 			if(member_list.get(i).getPassword() == password && member_list.get(i).getUserName() == username){

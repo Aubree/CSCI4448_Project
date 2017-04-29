@@ -3,7 +3,6 @@ package model;
 import java.util.ArrayList;
 
 public class Room {
-	private Building building;
 	private ArrayList<ResidentProfile> residentsList;
 	private Integer roomNumber;
 	private ArrayList<RoomAttribute> roomAttributes;
@@ -14,16 +13,6 @@ public class Room {
 		// Default Room
 		roomNumber = 555;
 		maxOccupancy = 2;
-		rcfList = new ArrayList<RoomConditionForm>();
-		roomAttributes = new ArrayList<RoomAttribute>();
-		generateRoomAttribute();
-	}
-	
-	public Room(Building building, Integer number, Integer maxOcc) {
-		// Default Room
-		this.building = building;
-		roomNumber = number;
-		maxOccupancy = maxOcc;
 		rcfList = new ArrayList<RoomConditionForm>();
 		roomAttributes = new ArrayList<RoomAttribute>();
 		generateRoomAttribute();

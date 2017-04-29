@@ -3,8 +3,6 @@ package model;
 import java.util.ArrayList;
 
 public class CUMember {
-	private String password;
-	private String username;
 	private String firstname;
 	private String lastname;
 	private String email;
@@ -13,20 +11,6 @@ public class CUMember {
 	private Integer cu_id;
 	private ResidentProfile resident_profile;
 	private ArrayList<CU_Job> job_list;
-	public static ArrayList<CUMember> member_list;
-	
-	public CUMember(String password, String username, String firstname, String lastname, String gender, String phone_number, Integer cu_id) {
-		this.password = password;
-		this.username = username;
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.email = firstname + "." + lastname + "@colorado.edu";
-		this.gender = gender;
-		this.phone_number = phone_number;
-		this.cu_id = cu_id;
-		this.resident_profile = null;	
-		job_list = new ArrayList<CU_Job>();
-	}
 	
 	public CUMember() {
 		// Default CUMember is an RA (and thus also a CA) thus has a Resident Profile and two jobs
@@ -42,25 +26,6 @@ public class CUMember {
 		job_list.add(new CommunityAssistant());
 	}
 	
-	public static void addUser(CUMember newbie){
-		member_list.add(newbie);
-	}
-	
-	public static CUMember lookUpUser(String username, String password){
-		for(int i=0; i < member_list.size(); i++){
-			if(member_list.get(i).getPassword() == password && member_list.get(i).getUserName() == username){
-				return member_list.get(i);
-			}
-		}
-		return null;
-	}
-	
-	public String getPassword(){
-		return password;
-	}
-	public String getUserName(){
-		return username;
-	}
 	
 	public static boolean isValidUser(String username, String password) {
 		

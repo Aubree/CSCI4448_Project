@@ -2,8 +2,6 @@ package view;
 import java.awt.Component;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -13,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-public class CheckOutGUI extends JFrame implements ActionListener {
+public class CheckOutGUI extends JFrame {
 	
 	private GridBagConstraints layoutConstraints;
 
@@ -65,14 +63,5 @@ public class CheckOutGUI extends JFrame implements ActionListener {
 		add(submitButton, layoutConstraints);
 		
 		setVisible(true);
-	}
-	
-	public void actionPerformed(ActionEvent ae) {
-		Object object = ae.getSource();
-
-		if (object == submitButton) {
-			System.out.println("Submit Button Pressed");
-			dispose();
-		}
 	}
 }

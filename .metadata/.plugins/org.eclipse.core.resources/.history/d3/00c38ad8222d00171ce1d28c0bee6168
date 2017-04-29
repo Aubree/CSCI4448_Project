@@ -25,19 +25,6 @@ public class ResidentProfile {
 		email = user.getEmail();
 		phoneNumber = user.getPhone_number();
 	}
-	
-	public ResidentProfile(CUMember user, Building building, Room room) {
-		// Default Resident Profile
-		this.building = building;
-		studentRoom = room;
-		deskItemHistory = new ArrayList<Item>();
-		keyHistory = new ArrayList<Key>();
-		roommateAgreement = new RoommateAgreement();
-		firstname = user.getFirstname();
-		lastname = user.getLastname();
-		email = user.getEmail();
-		phoneNumber = user.getPhone_number();
-	}
 
 	public Room getStudentRoom() {
 		return studentRoom;

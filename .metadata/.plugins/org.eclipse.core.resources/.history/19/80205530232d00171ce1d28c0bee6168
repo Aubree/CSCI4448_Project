@@ -1,0 +1,24 @@
+import view.*;
+import model.*;
+
+
+public class Driver2 {
+	
+	
+	public static void main(String[] args) {
+		setup();
+		LogInGUI login = new LogInGUI();
+	}
+	
+	public static void setup(){
+		Building Farr = new Building();
+		Building Stearns = new Building();
+		
+		Room one = new Room();
+		
+		CUMember jason = new CUMember("pass", "jahi3695", "Jason", "Hill", "male?", "303-957-4532", 123);
+		CUMember.addUser(jason);
+		ResidentProfile hey = new ResidentProfile("");
+		jason.setResident_profile(hey);
+	}
+}
