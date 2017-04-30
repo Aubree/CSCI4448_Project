@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Building {
-	private ArrayList<Room> roomsList = new ArrayList<Room>();
+	private ArrayList<Room> rooms_list = new ArrayList<Room>();
 	private String name;
-	private Integer max_occupancy;
+	//should be derived from the rooms we have - this could change depending on state of rooms
+	//private Integer max_occupancy;
 	private ArrayList<FrontDesk> front_desk = new ArrayList<FrontDesk>();
 	private ArrayList<CU_Job> staff = new ArrayList<CU_Job>();
+	private static ArrayList<Building> building_list = new ArrayList<Building>();
 	
 	public Building() {
 		// Default Building Object
@@ -17,31 +19,18 @@ public class Building {
 		
 	}
 	
-	public Boolean getRoomAvailability(){//doesn't this has to pass in roomsList
-		//if room availability is open return TRUE
-		//else return FALSE
-		//ca this getter be a one liner?
-		//for(int i = 0; i < roomsList.size(); i++ ){
-			
-		//}
-		return true;
+	public Building(String name) {
+		// Default Building Object
+		this.name = name;
+		front_desk.add(new FrontDesk());
+		
 	}
+	
 	public void addRoom(Room room){
-		roomsList.add(room);
+		rooms_list.add(room);
 		//add room to roomsList
 	}
-	public ArrayList<Room> getRoomList(){
-		return roomsList;
-	}
-	public Room getRoom(Integer roomnumber){
-		//filler until I figure out wtf im doing
-		if(roomsList.size() < roomnumber) {
-			return null;
-		}
-		else {
-			return roomsList.get(roomnumber);
-		}
-	}
+	
 	public String getName(){
 		return name;
 	}
@@ -66,6 +55,30 @@ public class Building {
 	
 	public ArrayList<CU_Job> getStaffList(){
 		return staff;
+	}
+
+	public static Building lookUp(String text) {
+		for(int i=0; i < building_list.size(); i++){
+			if(building_list.get(i).getName() == text){
+				return building_list.get(i);
+			}
+		}
+		return null;
+	}
+
+	public static void addBuilding(Building building) {
+		// TODO Auto-generated method stub
+		building_list.add(building);
+		
+	}
+
+	public Room placeResident(CUMember newbie) {
+		for(int i=0; i < rooms_list.size(); i++){
+			if(rooms_list.get(i).hasAvailability() == true){
+				rooms_list.get(i).addResident(newbie);
+			}
+		}
+		return null;
 	}
 	
 }

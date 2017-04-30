@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Room {
 	private Building building;
-	private ArrayList<ResidentProfile> residentsList;
+	private ArrayList<CUMember> residentsList = new ArrayList<CUMember>();
 	private Integer roomNumber;
 	private ArrayList<RoomAttribute> roomAttributes;
 	private Integer maxOccupancy;
@@ -21,6 +21,7 @@ public class Room {
 	
 	public Room(Building building, Integer number, Integer maxOcc) {
 		// Default Room
+		//how do we add this room to the building's room list? - done separatly in Driver2 file.
 		this.building = building;
 		roomNumber = number;
 		maxOccupancy = maxOcc;
@@ -37,8 +38,17 @@ public class Room {
 		}
 	}
 	
+	public Boolean hasAvailability(){
+		if(residentsList.size() < maxOccupancy){
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 	
-	public void addResident(ResidentProfile resident) {
+	
+	public void addResident(CUMember resident) {
 		residentsList.add(resident);
 	}
 	

@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 
+import view.ResidentAdvisorTab;
+
 public class CUMember {
 	private String password;
 	private String username;
@@ -13,9 +15,10 @@ public class CUMember {
 	private Integer cu_id;
 	private ResidentProfile resident_profile;
 	private ArrayList<CU_Job> job_list;
-	public static ArrayList<CUMember> member_list;
+	public static ArrayList<CUMember> member_list = new ArrayList<CUMember>();
+	public static Integer IDNumber = 0;
 	
-	public CUMember(String password, String username, String firstname, String lastname, String gender, String phone_number, Integer cu_id) {
+	public CUMember(String password, String username, String firstname, String lastname, String gender, String phone_number) {
 		this.password = password;
 		this.username = username;
 		this.firstname = firstname;
@@ -23,7 +26,8 @@ public class CUMember {
 		this.email = firstname + "." + lastname + "@colorado.edu";
 		this.gender = gender;
 		this.phone_number = phone_number;
-		this.cu_id = cu_id;
+		this.cu_id = IDNumber;
+		CUMember.incrementID();
 		this.resident_profile = null;	
 		job_list = new ArrayList<CU_Job>();
 	}
@@ -48,7 +52,7 @@ public class CUMember {
 	
 	public static CUMember lookUpUser(String username, String password){
 		for(int i=0; i < member_list.size(); i++){
-			if(member_list.get(i).getPassword() == password && member_list.get(i).getUserName() == username){
+			if(member_list.get(i).getPassword().equals(password) && member_list.get(i).getUserName().equals(username)){
 				return member_list.get(i);
 			}
 		}
@@ -134,6 +138,8 @@ public class CUMember {
 		this.job_list = job_list;
 	}
 
-	
-
+	public static void incrementID() {
+		// TODO Auto-generated method stub
+		IDNumber += 1;
+	}
 }

@@ -1,0 +1,84 @@
+package model;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class Building {
+	private ArrayList<Room> rooms_list = new ArrayList<Room>();
+	private String name;
+	//should be derived from the rooms we have - this could change depending on state of rooms
+	//private Integer max_occupancy;
+	private ArrayList<FrontDesk> front_desk = new ArrayList<FrontDesk>();
+	private ArrayList<CU_Job> staff = new ArrayList<CU_Job>();
+	private static ArrayList<Building> building_list = new ArrayList<Building>();
+	
+	public Building() {
+		// Default Building Object
+		name = "Stearns East";
+		front_desk.add(new FrontDesk());
+		
+	}
+	
+	public Building(String name) {
+		// Default Building Object
+		this.name = name;
+		front_desk.add(new FrontDesk());
+		
+	}
+	
+	public void addRoom(Room room){
+		rooms_list.add(room);
+		//add room to roomsList
+	}
+	
+	public String getName(){
+		return name;
+	}
+	public void addFrontDesk(){ //should this be nothing or deskId
+		//add front desk to List<FrontDesk>
+	}
+	public void addStaffMember(CU_Job cu_jobs){
+		staff.add(cu_jobs);
+	}
+	public String getStaffMember(String CU_id){
+		return CU_id;
+	}
+	//getStaffList()
+	public FrontDesk getFrontDesk(Integer deskId){
+		FrontDesk two = new FrontDesk();
+		return two;
+	}
+	
+	public ArrayList<FrontDesk> getFrontDesks() {
+		return front_desk;
+	}
+	
+	public ArrayList<CU_Job> getStaffList(){
+		return staff;
+	}
+
+	public static Building lookUp(String text) {
+		for(int i=0; i < building_list.size(); i++){
+			if(building_list.get(i).getName() == text){
+				return building_list.get(i);
+			}
+		}
+		return null;
+	}
+
+	public static void addBuilding(Building building) {
+		// TODO Auto-generated method stub
+		building_list.add(building);
+		
+	}
+
+	public Room placeResident(CUMember newbie) {
+		for(int i=0; i < building_list.size(); i++){
+			if(building_list.get(i).getName() == text){
+				return building_list.get(i);
+			}
+		}
+		return null;
+	}
+	
+}

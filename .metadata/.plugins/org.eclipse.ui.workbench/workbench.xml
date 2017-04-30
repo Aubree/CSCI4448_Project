@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="12" version="2.0">
+<workbenchAdvisor/>
+<window height="1740" width="2802" x="400" y="60">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="184" y="30"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="156" y="30"/>
+<coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="88" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1493500023164" focus="true" label="Workspace - Resource">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Driver2.java" partName="Driver2.java" path="/home/jahi3695/Desktop/OfficialOO/CSCI4448_Project/RevampRezlife/src/Driver2.java" title="Driver2.java" tooltip="RevampRezlife/src/Driver2.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RevampRezlife/src/Driver2.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="26" selectionOffset="831" selectionTopPixel="889"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogInController.java" partName="LogInController.java" path="/home/jahi3695/Desktop/OfficialOO/CSCI4448_Project/RevampRezlife/src/controller/LogInController.java" title="LogInController.java" tooltip="RevampRezlife/src/controller/LogInController.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RevampRezlife/src/controller/LogInController.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="237" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogInGUI.java" partName="LogInGUI.java" path="/home/jahi3695/Desktop/OfficialOO/CSCI4448_Project/RevampRezlife/src/view/LogInGUI.java" title="LogInGUI.java" tooltip="RevampRezlife/src/view/LogInGUI.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RevampRezlife/src/view/LogInGUI.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="42" selectionOffset="2571" selectionTopPixel="2426"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CUMember.java" partName="CUMember.java" path="/home/jahi3695/Desktop/OfficialOO/CSCI4448_Project/RevampRezlife/src/model/CUMember.java" title="CUMember.java" tooltip="RevampRezlife/src/model/CUMember.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RevampRezlife/src/model/CUMember.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="2187" selectionTopPixel="2386"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Room.java" partName="Room.java" path="/home/jahi3695/Desktop/OfficialOO/CSCI4448_Project/RevampRezlife/src/model/Room.java" title="Room.java" tooltip="RevampRezlife/src/model/Room.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RevampRezlife/src/model/Room.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="163" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Building.java" partName="Building.java" path="/home/jahi3695/Desktop/OfficialOO/CSCI4448_Project/RevampRezlife/src/model/Building.java" title="Building.java" tooltip="RevampRezlife/src/model/Building.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RevampRezlife/src/model/Building.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="533" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ResidentAdvisor.java" partName="ResidentAdvisor.java" path="/home/jahi3695/Desktop/OfficialOO/CSCI4448_Project/RevampRezlife/src/model/ResidentAdvisor.java" title="ResidentAdvisor.java" tooltip="RevampRezlife/src/model/ResidentAdvisor.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RevampRezlife/src/model/ResidentAdvisor.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="44" selectionTopPixel="63"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckInGUI.java" partName="CheckInGUI.java" path="/home/jahi3695/Desktop/OfficialOO/CSCI4448_Project/RevampRezlife/src/view/CheckInGUI.java" title="CheckInGUI.java" tooltip="RevampRezlife/src/view/CheckInGUI.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RevampRezlife/src/view/CheckInGUI.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6758" selectionTopPixel="6833"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ResidentProfile.java" partName="ResidentProfile.java" path="/home/jahi3695/Desktop/OfficialOO/CSCI4448_Project/RevampRezlife/src/model/ResidentProfile.java" title="ResidentProfile.java" tooltip="RevampRezlife/src/model/ResidentProfile.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RevampRezlife/src/model/ResidentProfile.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="83" selectionOffset="908" selectionTopPixel="564"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HomeGUI.java" partName="HomeGUI.java" path="/home/jahi3695/Desktop/OfficialOO/CSCI4448_Project/RevampRezlife/src/view/HomeGUI.java" title="HomeGUI.java" tooltip="RevampRezlife/src/view/HomeGUI.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/RevampRezlife/src/view/HomeGUI.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="38" selectionOffset="679" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.pde.runtime.LogView" partName="Error Log">
+<viewState activate="true" allSessions="true" column2="300" column3="150" column4="2304" error="true" groupBy="0" info="true" limit="50" ok="true" orderType="2" orderValue="-1" show_filter_text="true" useLimit="true" warning="true"/>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="85" org.eclipse.ui.ide.descriptionField="850" org.eclipse.ui.ide.locationField="255" org.eclipse.ui.ide.markerType="255" org.eclipse.ui.ide.pathField="340" org.eclipse.ui.ide.priorityField="85" org.eclipse.ui.ide.resourceField="255"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+</views>
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.ui.resourcePerspective">
+<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.views.BookmarkView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.PropertySheet"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.team.cvs.ui.cvsPerspective"/>
+<perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="bottomRight" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
+<fastViews>
+<view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.8712364"/>
+<view id="org.eclipse.pde.runtime.LogView" ratio="0.29980782"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="16384" id="topLeft" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="1">
+<fastViews>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.3170391" ratioLeft="681" ratioRight="1467" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottomRight" ratio="0.58664954" ratioLeft="914" ratioRight="644" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+<info folder="true" part="bottomLeft" ratio="0.5" ratioLeft="305" ratioRight="305" relationship="4" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RevampRezlife/src/Driver2.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RevampRezlife/src/model/CUMember.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RevampRezlife/src/model/Building.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RevampRezlife/src/view/CheckInGUI.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RevampRezlife/src/model/Room.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RevampRezlife/src/model/ResidentProfile.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RevampRezlife/src/view/LogInGUI.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/RevampRezlife/src/view/HomeGUI.java"/>
+</editors>
+<item historyLabel="Building.java" index="2">
+<position info="not_deleted" x="770" y="41"/>
+</item>
+<item historyLabel="ResidentProfile.java" index="5">
+<position info="not_deleted" x="1157" y="0"/>
+</item>
+<item historyLabel="CheckInGUI.java" index="3">
+<position info="not_deleted" x="6758" y="0"/>
+</item>
+<item historyLabel="Building.java" index="2">
+<position info="not_deleted" x="842" y="0"/>
+</item>
+<item historyLabel="Room.java" index="4">
+<position info="not_deleted" x="1295" y="0"/>
+</item>
+<item historyLabel="CUMember.java" index="1">
+<position info="not_deleted" x="1781" y="0"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="1043" y="0"/>
+</item>
+<item historyLabel="Building.java" index="2">
+<position info="not_deleted" x="1672" y="30"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="1043" y="0"/>
+</item>
+<item historyLabel="Building.java" index="2">
+<position info="not_deleted" x="1672" y="30"/>
+</item>
+<item historyLabel="Building.java" index="2">
+<position info="not_deleted" x="148" y="0"/>
+</item>
+<item historyLabel="Building.java" index="2">
+<position info="not_deleted" x="514" y="114"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="1043" y="0"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="396" y="0"/>
+</item>
+<item historyLabel="Building.java" index="2">
+<position info="not_deleted" x="749" y="0"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="396" y="0"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="334" y="29"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="131" y="10"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="334" y="29"/>
+</item>
+<item historyLabel="Building.java" index="2">
+<position info="not_deleted" x="1672" y="30"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="334" y="29"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="333" y="0"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="334" y="29"/>
+</item>
+<item historyLabel="Building.java" index="2">
+<position info="not_deleted" x="1672" y="30"/>
+</item>
+<item historyLabel="Building.java" index="2">
+<position info="not_deleted" x="506" y="0"/>
+</item>
+<item historyLabel="Building.java" index="2">
+<position info="not_deleted" x="533" y="0"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="334" y="29"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="697" y="17"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="692" y="0"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="694" y="0"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="714" y="0"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="831" y="26"/>
+</item>
+<item historyLabel="CUMember.java" index="1">
+<position info="not_deleted" x="1781" y="0"/>
+</item>
+<item historyLabel="CUMember.java" index="1">
+<position info="not_deleted" x="459" y="0"/>
+</item>
+<item historyLabel="CUMember.java" index="1">
+<position info="not_deleted" x="386" y="0"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="831" y="26"/>
+</item>
+<item historyLabel="ResidentProfile.java" index="5">
+<position info="not_deleted" x="908" y="83"/>
+</item>
+<item historyLabel="Room.java" index="4">
+<position info="not_deleted" x="1262" y="30"/>
+</item>
+<item historyLabel="Room.java" index="4">
+<position info="not_deleted" x="160" y="0"/>
+</item>
+<item historyLabel="Room.java" index="4">
+<position info="not_deleted" x="163" y="0"/>
+</item>
+<item historyLabel="Driver2.java" index="0">
+<position info="not_deleted" x="831" y="26"/>
+</item>
+<item historyLabel="LogInGUI.java" index="6">
+<position info="not_deleted" x="2571" y="42"/>
+</item>
+<item historyLabel="HomeGUI.java" index="7">
+<position info="not_deleted" x="405" y="26"/>
+</item>
+<item historyLabel="HomeGUI.java" index="7">
+<position info="not_deleted" x="705" y="0"/>
+</item>
+<item historyLabel="CUMember.java" index="1">
+<position info="not_deleted" x="386" y="0"/>
+</item>
+<item historyLabel="LogInGUI.java" index="6">
+<position info="not_deleted" x="2571" y="42"/>
+</item>
+<item historyLabel="CheckInGUI.java" index="3">
+<position info="not_deleted" x="6758" y="0"/>
+</item>
+<item historyLabel="ResidentProfile.java" index="5">
+<position info="not_deleted" x="908" y="83"/>
+</item>
+<item historyLabel="CUMember.java" index="1">
+<position info="not_deleted" x="2187" y="13"/>
+</item>
+<item active="true" historyLabel="HomeGUI.java" index="7">
+<position info="not_deleted" x="705" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="topLeft"/>
+</trimArea>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottomRight"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HomeGUI.java" tooltip="RevampRezlife/src/view/HomeGUI.java">
+<persistable path="/RevampRezlife/src/view/HomeGUI.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ResidentProfile.java" tooltip="RevampRezlife/src/model/ResidentProfile.java">
+<persistable path="/RevampRezlife/src/model/ResidentProfile.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckInGUI.java" tooltip="RevampRezlife/src/view/CheckInGUI.java">
+<persistable path="/RevampRezlife/src/view/CheckInGUI.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ResidentAdvisor.java" tooltip="RevampRezlife/src/model/ResidentAdvisor.java">
+<persistable path="/RevampRezlife/src/model/ResidentAdvisor.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ResidentAdvisorController.java" tooltip="RevampRezlife/src/controller/ResidentAdvisorController.java">
+<persistable path="/RevampRezlife/src/controller/ResidentAdvisorController.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CU_Job.java" tooltip="RevampRezlife/src/model/CU_Job.java">
+<persistable path="/RevampRezlife/src/model/CU_Job.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Building.java" tooltip="RevampRezlife/src/model/Building.java">
+<persistable path="/RevampRezlife/src/model/Building.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Room.java" tooltip="RevampRezlife/src/model/Room.java">
+<persistable path="/RevampRezlife/src/model/Room.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CUMember.java" tooltip="RevampRezlife/src/model/CUMember.java">
+<persistable path="/RevampRezlife/src/model/CUMember.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Driver.java" tooltip="RevampRezlife/src/Driver.java">
+<persistable path="/RevampRezlife/src/Driver.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckedIn.java" tooltip="RevampRezlife/src/model/CheckedIn.java">
+<persistable path="/RevampRezlife/src/model/CheckedIn.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogInGUI.java" tooltip="RevampRezlife/src/view/LogInGUI.java">
+<persistable path="/RevampRezlife/src/view/LogInGUI.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CheckOutGUI.java" tooltip="RevampRezlife/src/view/CheckOutGUI.java">
+<persistable path="/RevampRezlife/src/view/CheckOutGUI.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LogInController.java" tooltip="RevampRezlife/src/controller/LogInController.java">
+<persistable path="/RevampRezlife/src/controller/LogInController.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Driver2.java" tooltip="RevampRezlife/src/Driver2.java">
+<persistable path="/RevampRezlife/src/Driver2.java"/>
+</file>
+</mruList>
+</workbench>

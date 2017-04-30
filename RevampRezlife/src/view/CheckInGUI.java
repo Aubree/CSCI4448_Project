@@ -1,6 +1,9 @@
 package view;
 
+
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -12,9 +15,12 @@ import javax.swing.JPasswordField;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 
+import model.Building;
 import model.CUMember;
+import model.ResidentProfile;
+import model.Room;
 
-public class CheckInGUI extends JFrame {
+public class CheckInGUI extends JFrame implements ActionListener {
 	
 	private GridBagConstraints layoutConstraints;
 
@@ -25,8 +31,12 @@ public class CheckInGUI extends JFrame {
 	private JTextField firstNameTextField;
 	private JLabel lastNameLabel;
 	private JTextField lastNameTextField;
-	private JLabel emailLabel;
-	private JTextField emailTextField;
+	private JLabel passwordLabel;
+	private JTextField passwordTextField;
+	private JLabel userNameLabel;
+	private JTextField userNameTextField;
+	private JLabel genderLabel;
+	private JTextField genderTextField;
 	private JLabel phoneNumberLabel;
 	private JTextField phoneNumberTextField;
 	private JLabel buildingLabel;
@@ -45,12 +55,6 @@ public class CheckInGUI extends JFrame {
 	
 	private void buildCheckInGUI() {
 		layoutConstraints = new GridBagConstraints();
-		
-		String[] choices = { "Tom","Dick", "Harry"};
-		final JComboBox<String> residents = new JComboBox<String>(choices);
-
-		residents.setVisible(true);
-		add(residents, layoutConstraints);
 		
 		headerLabel = new JLabel("New Resident Creation Form", JLabel.CENTER);
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
@@ -87,19 +91,19 @@ public class CheckInGUI extends JFrame {
 		layoutConstraints.gridy = 2;
 		add(lastNameTextField, layoutConstraints);
 		
-		emailLabel = new JLabel("Email:");
+		genderLabel = new JLabel("Gender:");
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridx = 0;
 		layoutConstraints.gridy = 3;
 		layoutConstraints.gridwidth = 1;
-		add(emailLabel, layoutConstraints);
+		add(genderLabel, layoutConstraints);
 		
-		emailTextField = new JTextField();
+		genderTextField = new JTextField();
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridwidth = 1;
 		layoutConstraints.gridx = 1;
 		layoutConstraints.gridy = 3;
-		add(emailTextField, layoutConstraints);
+		add(genderTextField, layoutConstraints);
 		
 		phoneNumberLabel = new JLabel("Phone Number:");
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
@@ -129,7 +133,8 @@ public class CheckInGUI extends JFrame {
 		layoutConstraints.gridy = 5;
 		add(buildingTextField, layoutConstraints);
 		
-		studentRoomLabel = new JLabel("StudentRoom:");
+		/*
+		 * studentRoomLabel = new JLabel("StudentRoom:");
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridx = 0;
 		layoutConstraints.gridy = 6;
@@ -142,16 +147,58 @@ public class CheckInGUI extends JFrame {
 		layoutConstraints.gridx = 1;
 		layoutConstraints.gridy = 6;
 		add(studentRoomTextField, layoutConstraints);
+		*/
 		
-		submitButton = new JButton("Create Resident");
-		//submitButton.addActionListener(this);
+		passwordLabel = new JLabel("New Password:");
+		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
+		layoutConstraints.gridx = 0;
+		layoutConstraints.gridy = 7;
+		layoutConstraints.gridwidth = 1;
+		add(passwordLabel, layoutConstraints);
+		
+		passwordTextField = new JTextField();
 		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
 		layoutConstraints.gridwidth = 1;
 		layoutConstraints.gridx = 1;
 		layoutConstraints.gridy = 7;
+		add(passwordTextField, layoutConstraints);
+		
+		userNameLabel = new JLabel("New Username:");
+		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
+		layoutConstraints.gridx = 0;
+		layoutConstraints.gridy = 8;
+		layoutConstraints.gridwidth = 1;
+		add(userNameLabel, layoutConstraints);
+		
+		userNameTextField = new JTextField();
+		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
+		layoutConstraints.gridwidth = 1;
+		layoutConstraints.gridx = 1;
+		layoutConstraints.gridy = 8;
+		add(userNameTextField, layoutConstraints);
+		
+		submitButton = new JButton("Create Resident");
+		submitButton.addActionListener(this);
+		layoutConstraints.fill = layoutConstraints.HORIZONTAL;
+		layoutConstraints.gridwidth = 1;
+		layoutConstraints.gridx = 1;
+		layoutConstraints.gridy = 9;
 		add(submitButton, layoutConstraints);
 		
 		setVisible(true);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent a) {
+		
+		Building building = Building.lookUp(buildingTextField.getText());
+		//Room room = Room.lookUp(studentRoomTextField.getText());
+		
+		CUMember newbie = new CUMember(passwordTextField.getText(), userNameTextField.getText(), firstNameTextField.getText(), lastNameTextField.getText(), genderTextField.getText(), phoneNumberTextField.getText());
+		CUMember.addUser(newbie);
+		ResidentProfile hey = new ResidentProfile(newbie, building, building.placeResident(newbie));
+		newbie.setResident_profile(hey);
+		
 	}
 
 }

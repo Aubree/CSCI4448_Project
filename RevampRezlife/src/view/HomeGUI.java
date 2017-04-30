@@ -27,10 +27,14 @@ public class HomeGUI extends JFrame {
 	
 	private void buildTabs(CUMember cu_member) {
 		tab_panels = new ArrayList<JPanel>();
+		tab_panels.add(new ResidentTab(cu_member));
+		tabbed_pane.addTab("Resident", tab_panels.get(0));
+		/*
 		if(cu_member.hasResidentProfile()) {
 			tab_panels.add(new ResidentTab(cu_member));
 			tabbed_pane.addTab("Resident", tab_panels.get(0));
 		}
+		*/
 		
 		ArrayList<CU_Job> jobs = cu_member.getJob_list();
 		for (int i = 0; i < jobs.size(); i++) {

@@ -2,6 +2,8 @@ package view;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
+import model.CUMember;
 import controller.*;
 
 
@@ -81,15 +83,27 @@ public class LogInGUI extends JFrame implements ActionListener{
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		ReturnCode result;
-		result = loginController.logInUser(identikeyTextField.getText(), passwordField.getText());
-		if (result.equals(ReturnCode.VALIDATION_ERROR)) {
+		
+		CUMember result = loginController.logInUser(identikeyTextField.getText(), passwordField.getText());
+	
+		if(result == null){
+			LogInGUI login = new LogInGUI();
+			dispose();
+			//new HomeGUI(loginController.getUser());
+		}
+		else {
+			new HomeGUI(result);
+			dispose();
+		}
+	
+		
+		/*if (result.equals(ReturnCode.VALIDATION_ERROR)) {
 			identikeyTextField.setText("");
 			passwordField.setText("");
 		}
 		if (result.equals(ReturnCode.OPERATION_SUCCESSFUL)) {
 			new HomeGUI(loginController.getUser());
 			dispose();
-		}
+		}*/
 	}
 }

@@ -30,6 +30,10 @@ public class ResidentProfile {
 		// Default Resident Profile
 		this.building = building;
 		studentRoom = room;
+		studentRoom.addResident(user); // now the room shows up as having someone in it. 
+		//In reality you would want some error checking so that if the room were already at capacity, 
+		//it would deny this call and throw and throw a recoverable error.
+		//are we updating the room to reflect that someone is living there?
 		deskItemHistory = new ArrayList<Item>();
 		keyHistory = new ArrayList<Key>();
 		roommateAgreement = new RoommateAgreement();
