@@ -67,6 +67,7 @@ public class CommunityAssistantTab extends JPanel implements ActionListener{
 			System.out.println("Make Temporary Key Button Pushed");
 		}
 		if (object == returnTemporaryKeyButton) {
+			new CommunityAssistantReturnTempKeyGUI(caController);
 			System.out.println("Return Temporary Key Button Pushed");
 		}
 		if (object == roomMoveButton) {
