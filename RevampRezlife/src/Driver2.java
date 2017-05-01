@@ -35,6 +35,7 @@ public class Driver2 {
 		
 		CUMember jason = new CUMember("pass", "jahi3695", "Jason", "Hill", "male?", "303-957-4532");
 		CUMember.addUser(jason);
+		CUMember blank = new CUMember("","","Aubree", "Lytwyn","female", "123-456-7890");
 		ResidentProfile hey = new ResidentProfile(jason, Farr, one);
 		jason.setResident_profile(hey);
 		

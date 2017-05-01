@@ -12,5 +12,11 @@ public class BuffOneCard extends Key {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public Item getItemFromString(String line_in) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

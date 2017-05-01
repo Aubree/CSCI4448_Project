@@ -15,6 +15,8 @@ import javax.swing.JTextField;
 import controller.CommunityAssistantController;
 import controller.ReturnCode;
 
+import model.Key;
+
 
 public class CommunityAssistantMakeTempKeyGUI extends JFrame implements ActionListener {
 	private CommunityAssistantController caController;
@@ -33,6 +35,7 @@ public class CommunityAssistantMakeTempKeyGUI extends JFrame implements ActionLi
 	
 	private String studentId;
 	private String tempKeyNum;
+	private Key key;
 	
 	public CommunityAssistantMakeTempKeyGUI(CommunityAssistantController ca_controller) {
 		caController = ca_controller;
@@ -87,7 +90,8 @@ public class CommunityAssistantMakeTempKeyGUI extends JFrame implements ActionLi
 	}
 	private void tempKeyResponse(int choice) {
 		if (choice == JOptionPane.YES_OPTION) {
-			boolean result = caController.makeTemporaryKey(studentId, tempKeyNum);
+			boolean result = true;
+			//boolean result = key.modifyKey(studentId, tempKeyNum);
 			if (result == true) {
 				JOptionPane.showMessageDialog(null, "Made Temporary Key.");
 			}

@@ -22,6 +22,7 @@ public class FrontDesk {
 		deskID = "001";
 		
 		//generateDefaultItems();
+		generateDefaultTemps();
 		readDeskItemsFromFile();
 	}
 	
@@ -74,6 +75,7 @@ public class FrontDesk {
 		
 		for (int i = 0; i < 10; i++) {
 			addDeskItem(new DeskItem(item_name + i, item_state, late_fee_charge, i));
+			
 		}
 	}
 	
@@ -98,7 +100,56 @@ public class FrontDesk {
 	public String getDeskID() {
 		return deskID;
 	}
-	
+	////////////////////////////////////////////////////////
+	private void readTempInfoFromFile(){
+		String line;
+		try{
+			FileReader fr = new FileReader(TemporaryKey.storageFileName);
+			BufferedReader br = new BufferedReader(fr);
+			while((line = br.readLine()) != null){
+				System.out.println(line);
+			}
+			fr.close();
+		} catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+	private void writeTempInfoToFile(){
+		String filename = TemporaryKey.storageFileName;
+		try{
+			filename = new File(filename).getAbsolutePath();
+			FileWriter fw = new FileWriter(filename);
+			fw.write(temporaryKeyList.get(0).toString());
+			fw.close();
+			for(int i = 1; i < temporaryKeyList.size(); i++){
+				appendTempKeyInfoToFile(temporaryKeyList.get(i));
+			}
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	private void appendTempKeyInfoToFile(TemporaryKey temporaryKey) {
+		try{
+			FileWriter fw = new FileWriter(temporaryKey.getStorageFileName(), true);
+			fw.append(temporaryKey.toString());
+			fw.close();
+		} catch (IOException e){
+			e.printStackTrace();
+		}
+	}
+	public void addTempKeyInfo(TemporaryKey temp){
+		temporaryKeyList.add(temp);
+		writeTempInfoToFile();
+	}
+	private void generateDefaultTemps() {
+		String temp_name = "temp";
+		ItemState temp_state = new CheckedIn();
+		Integer late_fee_charge = 10;
+		
+		for (int i = 0; i < 10; i++) {
+			addTempKeyInfo(new TemporaryKey(temp_name + i, temp_state, late_fee_charge, i));
+		}
+	}
 	public Key getTempKey(Integer itemId) {
 		for (int i = 0; i < temporaryKeyList.size(); i++){
 			if (temporaryKeyList.get(i).getItemID() == itemId){

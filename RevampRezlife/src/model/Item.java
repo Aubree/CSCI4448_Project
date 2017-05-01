@@ -8,6 +8,7 @@ public abstract class Item {
 	protected ItemState itemState;
 	protected Integer lateFeeCharge;
 	protected Integer itemID;
+	protected Integer tempNum;
 	protected static String storageFileName;
 	
 	public Item(String item_name, ItemState item_state, Integer late_fee_charge, Integer item_id) {
@@ -18,7 +19,7 @@ public abstract class Item {
 	}
 	
 	public abstract String toString();
-	
+
 	public String getItemName() {
 		return itemName;
 	}
@@ -38,7 +39,6 @@ public abstract class Item {
 	public String getStorageFileName() {
 		return storageFileName;
 	}
-
 	private void setItemState(ItemState itemState) {
 		this.itemState = itemState;
 	}

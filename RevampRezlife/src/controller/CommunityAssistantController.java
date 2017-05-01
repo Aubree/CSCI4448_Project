@@ -23,8 +23,9 @@ public class CommunityAssistantController {
 	}
 	public boolean makeTemporaryKey(String studentId, String tempKeyNum) {
 		
-		//Figure this shit out
-		return false;
+		//TODO: verify id, temp list change key to checked out
+		
+		return true;
 	}
 	public ReturnCode validateId(String studentId , String tempKeyNum) {
 		// Todo: Implement database connection and confirm identity
@@ -45,7 +46,8 @@ public class CommunityAssistantController {
 	
 	public ArrayList<DeskItem> viewDeskItems() {
 		ArrayList<FrontDesk> front_desks = user.getBuildingWorked().getFrontDesks();
-		deskItemsList = front_desks.get(0).getDeskItems();
+		
+		//deskItemsList = front_desks.get(0).getDeskItems();
 
 //		deskItemsList = new ArrayList<DeskItem>();
 //		for (int i = 0; i < front_desks.size(); i++) {
