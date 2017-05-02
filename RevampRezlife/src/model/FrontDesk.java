@@ -128,10 +128,10 @@ public class FrontDesk {
 			e.printStackTrace();
 		}
 	}
-	private void appendTempKeyInfoToFile(TemporaryKey temporaryKey) {
+	private void appendTempKeyInfoToFile(TemporaryKey temp) {
 		try{
-			FileWriter fw = new FileWriter(temporaryKey.getStorageFileName(), true);
-			fw.append(temporaryKey.toString());
+			FileWriter fw = new FileWriter(temp.getStorageFileName(), true);
+			fw.append(temp.toString());
 			fw.close();
 		} catch (IOException e){
 			e.printStackTrace();
